@@ -96,8 +96,6 @@ function loadYouTubeAPI() {
   return ytLoader;
 }
 
-loadYouTubeAPI().then((YT) => getChantPlayer(YT));
-
 function clipPayload(clip) {
   const payload = {
     videoId: clip.id,
@@ -188,6 +186,39 @@ function cueTiger(player) {
   player.unMute();
   player.setVolume(100);
   player.loadVideoById({ videoId: TIGER.id, startSeconds: 0 });
+  try {
+    player.playVideo();
+  } catch {
+    /* player may not be ready */
+  }
+}
+
+function getTigerPlayer(YT) {
+  if (tigerReady) return tigerReady;
+  tigerReady = new Promise((resolve) => {
+    tigerPlayer = new YT.Player("tigerPlayer", {
+      width: 200,
+      height: 200,
+      videoId: TIGER.id,
+      playerVars: {
+        autoplay: 0,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1,
+        origin: window.location.origin,
+      },
+      events: {
+        onReady: () => resolve(tigerPlayer),
+        onError: () => {
+          tigerPlayer.loadVideoById({ videoId: TIGER_FALLBACK });
+        },
+        onStateChange: (event) => {
+          if (event.data === YT.PlayerState.ENDED) tigerOn = false;
+        },
+      },
+    });
+  });
+  return tigerReady;
 }
 
 function playTiger() {
@@ -197,41 +228,18 @@ function playTiger() {
     cueTiger(tigerPlayer);
     return;
   }
-  loadYouTubeAPI().then((YT) => {
-    if (tigerReady) {
-      tigerReady.then(() => cueTiger(tigerPlayer));
-      return;
-    }
-    tigerReady = new Promise((resolve) => {
-      tigerPlayer = new YT.Player("tigerPlayer", {
-        width: 200,
-        height: 200,
-        videoId: TIGER.id,
-        playerVars: {
-          autoplay: 1,
-          rel: 0,
-          modestbranding: 1,
-          playsinline: 1,
-          origin: window.location.origin,
-        },
-        events: {
-          onReady: (event) => {
-            event.target.unMute();
-            event.target.setVolume(100);
-            event.target.playVideo();
-            resolve(tigerPlayer);
-          },
-          onError: () => {
-            tigerPlayer.loadVideoById({ videoId: TIGER_FALLBACK });
-          },
-          onStateChange: (event) => {
-            if (event.data === YT.PlayerState.ENDED) tigerOn = false;
-          },
-        },
-      });
+  loadYouTubeAPI()
+    .then((YT) => getTigerPlayer(YT))
+    .then((player) => {
+      if (!tigerOn) return;
+      cueTiger(player);
     });
-  });
 }
+
+loadYouTubeAPI().then((YT) => {
+  getChantPlayer(YT);
+  getTigerPlayer(YT);
+});
 
 function typingTarget(node) {
   if (!node || node === document.body || node === document.documentElement) {
@@ -284,12 +292,18 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-const navBrand = document.querySelector("header .nav-brand");
-if (navBrand && window.matchMedia("(hover: none)").matches) {
-  navBrand.addEventListener("click", (event) => {
-    event.preventDefault();
-    toggleTiger();
-  });
+const mobileNav = window.matchMedia("(max-width: 900px)");
+const navBrand = document.querySelector("header.nav .nav-brand");
+
+function onNavBrandTap(event) {
+  if (!mobileNav.matches) return;
+  if (event.pointerType === "mouse") return;
+  event.preventDefault();
+  toggleTiger();
+}
+
+if (navBrand) {
+  navBrand.addEventListener("pointerup", onNavBrandTap);
 }
 
 const loader = document.querySelector("#loader");
