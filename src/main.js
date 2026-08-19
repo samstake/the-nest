@@ -243,6 +243,19 @@ function typingTarget(node) {
   return false;
 }
 
+function tigerBlocked() {
+  return Boolean(document.querySelector("dialog[open]"));
+}
+
+function toggleTiger() {
+  if (tigerBlocked()) return;
+  if (tigerOn) stopTiger();
+  else playTiger();
+}
+
+const TIGER_DOUBLE_MS = 450;
+let lastVolumeUp = 0;
+
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && tigerOn) {
     stopTiger();
@@ -251,11 +264,33 @@ window.addEventListener("keydown", (event) => {
   if (event.code !== "KeyT") return;
   if (event.repeat || event.metaKey || event.ctrlKey || event.altKey) return;
   if (typingTarget(event.target)) return;
-  if (document.querySelector("dialog[open]")) return;
+  if (tigerBlocked()) return;
   event.preventDefault();
-  if (tigerOn) stopTiger();
-  else playTiger();
+  toggleTiger();
 });
+
+window.addEventListener("keydown", (event) => {
+  const isVolumeUp =
+    event.code === "AudioVolumeUp" || event.keyCode === 175;
+  if (!isVolumeUp || event.repeat) return;
+  if (tigerBlocked()) return;
+
+  const now = Date.now();
+  if (now - lastVolumeUp < TIGER_DOUBLE_MS) {
+    lastVolumeUp = 0;
+    toggleTiger();
+  } else {
+    lastVolumeUp = now;
+  }
+});
+
+const navBrand = document.querySelector("header .nav-brand");
+if (navBrand && window.matchMedia("(hover: none)").matches) {
+  navBrand.addEventListener("click", (event) => {
+    event.preventDefault();
+    toggleTiger();
+  });
+}
 
 const loader = document.querySelector("#loader");
 const cursor = document.querySelector(".cursor");
