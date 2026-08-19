@@ -22,6 +22,15 @@ const games = [
   { week: "WK 18", opponent: "New York Giants", opp: "giants", logo: "/logos/giants.svg", when: "Date TBD", loc: "away", tags: ["away"] },
 ];
 
+const ROCKY = {
+  id: "ioE_O7Lm0I4",
+  title: "Gonna Fly Now — theme from Rocky",
+};
+const TIGER = {
+  id: "btPJPFnesV4",
+  title: "Eye of the Tiger — Survivor / Rocky III",
+};
+
 const calls = {
   eagles: "E! A! G! L! E! S! EAGLES!",
   fly: "Fly, Eagles, Fly — on the road to victory.",
@@ -29,10 +38,129 @@ const calls = {
   shove: "Fourth and short. Brotherly Shove. First down.",
 };
 
+const tracks = {
+  eagles: {
+    id: "cugVzMthSIo",
+    start: 0,
+    end: 8,
+    title: "E-A-G-L-E-S — It’s Always Sunny / FXX",
+    fallback: TIGER,
+  },
+  fly: {
+    id: "4ujS__0MQMo",
+    start: 0,
+    title: "Fly Eagles Fly — official in-stadium call",
+    fallback: ROCKY,
+  },
+  birds: {
+    id: "THCK0-IYHew",
+    start: 320,
+    title: "Go Birds — Jalen Hurts, Rocky steps",
+    fallback: TIGER,
+  },
+  shove: {
+    id: "DUHhB1C-5ZY",
+    start: 12,
+    end: 55,
+    title: "Brotherly Shove — official Eagles reel",
+    fallback: ROCKY,
+  },
+};
+
 const gamesEl = document.querySelector("#games");
 const filters = document.querySelectorAll(".filter");
 const pads = document.querySelectorAll(".pad");
 const chantOut = document.querySelector("#chantOut");
+const chantScreen = document.querySelector("#chantScreen");
+const chantTrack = document.querySelector("#chantTrack");
+
+let ytLoader;
+let chantPlayer;
+let chantPlayerReady;
+let activeClip;
+
+function loadYouTubeAPI() {
+  if (window.YT?.Player) return Promise.resolve(window.YT);
+  if (ytLoader) return ytLoader;
+  ytLoader = new Promise((resolve) => {
+    const prior = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      prior?.();
+      resolve(window.YT);
+    };
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    tag.async = true;
+    document.head.appendChild(tag);
+  });
+  return ytLoader;
+}
+
+loadYouTubeAPI().then((YT) => getChantPlayer(YT));
+
+function clipPayload(clip) {
+  const payload = {
+    videoId: clip.id,
+    startSeconds: clip.start || 0,
+  };
+  if (clip.end) payload.endSeconds = clip.end;
+  return payload;
+}
+
+function showClip(clip) {
+  chantScreen.classList.add("is-live");
+  chantTrack.textContent = `Now playing · ${clip.title}`;
+  chantPlayer.loadVideoById(clipPayload(clip));
+}
+
+function onChantError() {
+  if (!activeClip || activeClip.usedFallback || !activeClip.fallback) return;
+  activeClip.usedFallback = true;
+  const fallback = activeClip.fallback;
+  chantOut.textContent = "Clip blocked. Rocky takes it from here.";
+  showClip(fallback);
+}
+
+function getChantPlayer(YT) {
+  if (chantPlayerReady) return chantPlayerReady;
+  chantPlayerReady = new Promise((resolve) => {
+    chantPlayer = new YT.Player("chantPlayer", {
+      width: "100%",
+      height: "100%",
+      videoId: "4ujS__0MQMo",
+      playerVars: {
+        autoplay: 0,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1,
+        origin: window.location.origin,
+      },
+      events: {
+        onReady: () => resolve(chantPlayer),
+        onError: onChantError,
+      },
+    });
+  });
+  return chantPlayerReady;
+}
+
+function playCall(key) {
+  const clip = { ...tracks[key], usedFallback: false };
+  activeClip = clip;
+  chantScreen.classList.add("is-live");
+  chantTrack.textContent = `Now playing · ${clip.title}`;
+  if (chantPlayer?.loadVideoById) {
+    chantPlayer.loadVideoById(clipPayload(clip));
+    return;
+  }
+  loadYouTubeAPI()
+    .then((YT) => getChantPlayer(YT))
+    .then(() => {
+      if (activeClip !== clip) return;
+      showClip(clip);
+    });
+}
+
 const loader = document.querySelector("#loader");
 const cursor = document.querySelector(".cursor");
 const navToggle = document.querySelector("#navToggle");
@@ -279,6 +407,7 @@ pads.forEach((pad) => {
     pads.forEach((p) => p.classList.remove("is-hit"));
     pad.classList.add("is-hit");
     chantOut.textContent = calls[pad.dataset.call];
+    playCall(pad.dataset.call);
     document.body.animate(
       [
         { backgroundColor: "#07110f" },
@@ -828,11 +957,35 @@ function gradeClass(grade) {
   return "is-f";
 }
 
+function gradeScore(grade) {
+  if (!grade || grade === "INC") return null;
+  const base = { A: 11, B: 8, C: 5, D: 2, F: 0 }[grade[0]] ?? 0;
+  if (grade.includes("+")) return base + 1;
+  if (grade.includes("-")) return base - 1;
+  return base;
+}
+
+function yearStrength(entry) {
+  const scores = [gradeScore(entry.draftGrade), gradeScore(entry.faGrade)].filter(
+    (score) => score !== null
+  );
+  if (!scores.length) return { letter: "INC", cls: "is-inc" };
+  const avg = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+  if (avg >= 10) return { letter: "A", cls: "is-a" };
+  if (avg >= 7) return { letter: "B", cls: "is-b" };
+  if (avg >= 4) return { letter: "C", cls: "is-c" };
+  if (avg >= 1.5) return { letter: "D", cls: "is-d" };
+  return { letter: "F", cls: "is-f" };
+}
+
 const howieYearBar = document.querySelector("#howieYears");
 const howieBoard = document.querySelector("#howieBoard");
 
 howieYearBar.innerHTML = howieYears
-  .map((year) => `<button type="button" class="howie-year" data-year="${year.year}">${year.year}</button>`)
+  .map((year) => {
+    const strength = yearStrength(year);
+    return `<button type="button" class="howie-year ${strength.cls}" data-year="${year.year}" aria-label="${year.year}, overall ${strength.letter}">${year.year}</button>`;
+  })
   .join("");
 
 function renderHowie(year) {
@@ -842,12 +995,14 @@ function renderHowie(year) {
     btn.classList.toggle("is-on", Number(btn.dataset.year) === year);
   });
   const chipNote = data.chip ? `<p class="howie-chip">Chip Kelly had personnel. Still on the mountain so the record is honest.</p>` : "";
+  const overall = yearStrength(data);
   howieBoard.innerHTML = `
     <div class="howie-summary">
       <p class="eyebrow">${data.tag}</p>
       <h3>${data.year}</h3>
       ${chipNote}
       <div class="howie-grades">
+        <p>Overall <strong class="grade ${overall.cls}">${overall.letter}</strong></p>
         <p>Draft class <strong class="grade ${gradeClass(data.draftGrade)}">${data.draftGrade}</strong></p>
         <p>Free-agent class <strong class="grade ${gradeClass(data.faGrade)}">${data.faGrade}</strong></p>
       </div>

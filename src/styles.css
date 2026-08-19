@@ -819,6 +819,54 @@ svg {
   gap: 12px;
 }
 
+.chant-board {
+  margin-top: 28px;
+}
+
+.chant-screen {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #020807;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.chant-screen iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.chant-idle {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--fog);
+  background: rgba(2, 8, 7, 0.82);
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.chant-screen.is-live .chant-idle {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.chant-track {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--mint);
+  min-height: 1.4em;
+}
+
 .pad {
   min-height: 110px;
   border: 1px solid var(--line);
@@ -837,7 +885,7 @@ svg {
 }
 
 .chant-output {
-  margin-top: 28px;
+  margin-top: 16px;
   font-size: 18px;
   min-height: 1.6em;
 }
@@ -1092,7 +1140,7 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .howie-year {
@@ -1102,10 +1150,70 @@ svg {
   font-size: 11px;
 }
 
-.howie-year.is-on,
-.howie-year:hover {
-  border-color: var(--mint);
+.howie-year.is-a {
   color: var(--mint);
+  border-color: var(--mint);
+}
+
+.howie-year.is-b {
+  color: #7fd9b0;
+  border-color: #3d8f70;
+}
+
+.howie-year.is-c {
+  color: #c5b358;
+  border-color: #8a7a3a;
+}
+
+.howie-year.is-d {
+  color: #e0a07a;
+  border-color: #8a5a3a;
+}
+
+.howie-year.is-f {
+  color: #e07a7a;
+  border-color: #8a3a3a;
+}
+
+.howie-year.is-inc {
+  color: var(--silver);
+  border-color: var(--line);
+}
+
+.howie-year.is-on.is-a,
+.howie-year.is-a:hover {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+.howie-year.is-on.is-b,
+.howie-year.is-b:hover {
+  background: #7fd9b0;
+  color: var(--ink);
+}
+
+.howie-year.is-on.is-c,
+.howie-year.is-c:hover {
+  background: #c5b358;
+  color: var(--ink);
+}
+
+.howie-year.is-on.is-d,
+.howie-year.is-d:hover {
+  background: #e0a07a;
+  color: var(--ink);
+}
+
+.howie-year.is-on.is-f,
+.howie-year.is-f:hover {
+  background: #e07a7a;
+  color: var(--ink);
+}
+
+.howie-key {
+  margin: 0 0 28px;
+  color: var(--fog);
+  font-size: 13px;
 }
 
 .howie-summary h3 {
