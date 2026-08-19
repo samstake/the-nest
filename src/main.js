@@ -1,4 +1,5 @@
 import "./styles.css";
+import { howieYears } from "./howie.js";
 
 const games = [
   { week: "WK 1", opponent: "Washington Commanders", opp: "commanders", logo: "/logos/commanders.svg", when: "Sun Sep 13 · 4:25 PM · FOX", loc: "home", tags: ["home"] },
@@ -408,6 +409,144 @@ const playerStats = {
     ],
     schoolNote: "2025 Biletnikoff Award (79–1,156–11). First-round pick, 2026.",
   },
+  stowers: {
+    name: "Eli Stowers",
+    role: "R2 · TE",
+    photo: "/logos/eagles.svg",
+    college: "Texas A&M · New Mexico State · Vanderbilt",
+    schoolLabel: "College",
+    pro: [
+      ["NFL games", "0"],
+      ["Draft", "2026 · 2nd round · 54"],
+      ["Role", "Rookie TE"],
+    ],
+    proNote: "No NFL regular-season stats yet. Mackey Award tight end landed in the second.",
+    school: [
+      ["School", "Vanderbilt (final)"],
+      ["2025", "62–769–4"],
+      ["2024", "49–638–5"],
+      ["Honor", "2025 John Mackey Award"],
+    ],
+    schoolNote: "Started at Texas A&M, a year at New Mexico State, then two years at Vanderbilt. Combine TE records in the vertical (45.5) and broad jump (11-3).",
+  },
+  bell: {
+    name: "Markel Bell",
+    role: "R3 · OT",
+    photo: "/logos/eagles.svg",
+    college: "Holmes · Miami",
+    schoolLabel: "College",
+    pro: [
+      ["NFL games", "0"],
+      ["Draft", "2026 · 3rd round · 68"],
+      ["Size", "6-9 · 346"],
+    ],
+    proNote: "No NFL stats yet. Left tackle size for the next decade of Birds.",
+    school: [
+      ["Path", "Holmes CC → Miami"],
+      ["2025", "Started 16 at LT"],
+      ["Honor", "Third-team All-ACC"],
+      ["Miami games", "29 (21 starts)"],
+    ],
+    schoolNote: "JUCO All-Region, then two years at Miami, including a CFP run. Third-team All-ACC in 2025.",
+  },
+  payton: {
+    name: "Cole Payton",
+    role: "R5 · QB",
+    photo: "/logos/eagles.svg",
+    college: "North Dakota State",
+    schoolLabel: "College",
+    pro: [
+      ["NFL games", "0"],
+      ["Draft", "2026 · 5th round · 178"],
+      ["Role", "Rookie QB"],
+    ],
+    proNote: "No NFL stats yet. FCS dual-threat behind Hurts and McKee.",
+    school: [
+      ["School", "North Dakota State"],
+      ["2025 pass", "161–224 · 16 TD · 4 INT"],
+      ["2025 rush", "777 yards · 13 TD"],
+      ["Honor", "Second-team FCS All-American"],
+    ],
+    schoolNote: "Led FCS in passer rating (193.8) in 2025. Championship-program backup who finally started.",
+  },
+  morris: {
+    name: "Micah Morris",
+    role: "R6 · G",
+    photo: "/logos/eagles.svg",
+    college: "Georgia",
+    schoolLabel: "College",
+    pro: [
+      ["NFL games", "0"],
+      ["Draft", "2026 · 6th round · 207"],
+      ["Size", "6-5 · 334"],
+    ],
+    proNote: "No NFL stats yet. Georgia interior with two national titles on the résumé.",
+    school: [
+      ["School", "Georgia"],
+      ["Titles", "2 national (2021, 2022)"],
+      ["2024", "5 starts at RG"],
+      ["2025", "Started all 14 at LG"],
+    ],
+    schoolNote: "Five years in Athens. Started every game at left guard as a senior.",
+  },
+  wisniewski: {
+    name: "Cole Wisniewski",
+    role: "R7 · S",
+    photo: "/logos/eagles.svg",
+    college: "Texas Tech",
+    schoolLabel: "College",
+    pro: [
+      ["NFL games", "0"],
+      ["Draft", "2026 · 7th round · 244"],
+      ["Role", "Rookie safety"],
+    ],
+    proNote: "No NFL stats yet. Seventh-round safety with length.",
+    school: [
+      ["School", "Texas Tech"],
+      ["Position", "Safety"],
+      ["Size", "6-3 · 219"],
+    ],
+    schoolNote: "Red Raider safety. Developmental piece for Fangio’s back end.",
+  },
+  bernard: {
+    name: "Uar Bernard",
+    role: "R7 · DT",
+    photo: "/logos/eagles.svg",
+    college: "International Player Pathway",
+    schoolLabel: "Path",
+    pro: [
+      ["NFL games", "0"],
+      ["Draft", "2026 · 7th round · 251"],
+      ["Program", "IPP"],
+    ],
+    proNote: "No NFL stats yet. Nigeria-to-Philly via the International Player Pathway.",
+    school: [
+      ["College football", "None"],
+      ["Country", "Nigeria"],
+      ["Door", "Osi Umenyiora camp"],
+      ["Pro day", "4.63 forty · 39-inch vert"],
+    ],
+    schoolNote: "Spotted playing basketball, then the IPP. Outstanding workout numbers for a 306-pound tackle.",
+  },
+  jamesnewby: {
+    name: "Keyshawn James-Newby",
+    role: "R7 · EDGE",
+    photo: "/logos/eagles.svg",
+    college: "Montana Tech · Idaho · New Mexico",
+    schoolLabel: "College",
+    pro: [
+      ["NFL games", "0"],
+      ["Draft", "2026 · 7th round · 252"],
+      ["Role", "Rookie EDGE"],
+    ],
+    proNote: "No NFL stats yet. Production rusher who climbed from NAIA to the Mountain West.",
+    school: [
+      ["2025", "15 TFL · 9 sacks"],
+      ["2024 Idaho", "14.5 TFL · 10 sacks"],
+      ["Honor", "First-team All-Mountain West"],
+    ],
+    schoolNote: "Montana Tech, Idaho, then New Mexico. First-team All-MW in 2025.",
+  },
   goedert: {
     name: "Dallas Goedert",
     role: "88 · TE",
@@ -576,6 +715,29 @@ const playerStats = {
     ],
     schoolNote: "Tiger kicker. Fifth-round pick by Cincinnati in 2017, claimed by Philadelphia that September.",
   },
+  sirianni: {
+    name: "Nick Sirianni",
+    role: "Head coach · Year 6",
+    photo: "/players/sirianni.jpg",
+    college: "Mount Union",
+    schoolLabel: "College",
+    pro: [
+      ["Regular season", "59–26"],
+      ["Postseason", "6–4"],
+      ["Career", "65–30"],
+      ["Super Bowl", "LIX champion"],
+      ["NFC titles", "2"],
+      ["NFC East titles", "3"],
+    ],
+    proNote: "Eagles head coach since 2021. Playoffs in all five completed seasons. Super Bowl LVII appearance, Super Bowl LIX win. 2026 is year six.",
+    school: [
+      ["School", "Mount Union"],
+      ["Position", "Wide receiver"],
+      ["National titles", "3 (2000–02)"],
+      ["Senior year", "998 yards · 13 TDs"],
+    ],
+    schoolNote: "Three-year starter for the Purple Raiders. Began coaching at Mount Union, then IUP, Chiefs, Chargers, and Colts OC before Philadelphia.",
+  },
 };
 
 function rowsFrom(pairs) {
@@ -589,12 +751,34 @@ function rowsFrom(pairs) {
 
 const statModal = document.querySelector("#statModal");
 const statClose = document.querySelector("#statClose");
+let pinnedAnchor = null;
 
-function openStats(id) {
+function pinModal(modal, anchor) {
+  pinnedAnchor = anchor;
+  modal.classList.add("is-pinned");
+  const place = () => {
+    if (!modal.open || !pinnedAnchor) return;
+    const pad = 12;
+    const box = pinnedAnchor.getBoundingClientRect();
+    const width = modal.offsetWidth;
+    const height = modal.offsetHeight;
+    let left = box.left + (box.width - width) / 2;
+    let top = box.top + 12;
+    left = Math.max(pad, Math.min(left, window.innerWidth - width - pad));
+    top = Math.max(pad, Math.min(top, window.innerHeight - height - pad));
+    modal.style.left = `${left}px`;
+    modal.style.top = `${top}px`;
+  };
+  requestAnimationFrame(() => requestAnimationFrame(place));
+}
+
+function openStats(id, anchor) {
   const player = playerStats[id];
   if (!player) return;
-  document.querySelector("#statPhoto").src = player.photo;
-  document.querySelector("#statPhoto").alt = player.name;
+  const photo = document.querySelector("#statPhoto");
+  photo.src = player.photo;
+  photo.alt = player.name;
+  photo.classList.toggle("is-mark", player.photo.endsWith(".svg"));
   document.querySelector("#statRole").textContent = player.role;
   document.querySelector("#statName").textContent = player.name;
   document.querySelector("#statCollege").textContent = player.college;
@@ -604,10 +788,11 @@ function openStats(id) {
   document.querySelector("#statProNote").textContent = player.proNote;
   document.querySelector("#statSchoolNote").textContent = player.schoolNote;
   statModal.showModal();
+  pinModal(statModal, anchor);
 }
 
-document.querySelectorAll(".player").forEach((card) => {
-  const open = () => openStats(card.dataset.id);
+document.querySelectorAll(".player, .coach").forEach((card) => {
+  const open = () => openStats(card.dataset.id, card);
   card.addEventListener("click", open);
   card.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
@@ -623,3 +808,89 @@ statClose.addEventListener("click", () => statModal.close());
 statModal.addEventListener("click", (event) => {
   if (event.target === statModal) statModal.close();
 });
+statModal.addEventListener("close", () => {
+  statModal.classList.remove("is-pinned");
+  statModal.style.left = "";
+  statModal.style.top = "";
+  pinnedAnchor = null;
+});
+window.addEventListener("resize", () => {
+  if (statModal.open && pinnedAnchor) pinModal(statModal, pinnedAnchor);
+});
+
+function gradeClass(grade) {
+  if (grade === "INC") return "is-inc";
+  const letter = grade[0];
+  if (letter === "A") return "is-a";
+  if (letter === "B") return "is-b";
+  if (letter === "C") return "is-c";
+  if (letter === "D") return "is-d";
+  return "is-f";
+}
+
+const howieYearBar = document.querySelector("#howieYears");
+const howieBoard = document.querySelector("#howieBoard");
+
+howieYearBar.innerHTML = howieYears
+  .map((year) => `<button type="button" class="howie-year" data-year="${year.year}">${year.year}</button>`)
+  .join("");
+
+function renderHowie(year) {
+  const data = howieYears.find((entry) => entry.year === year);
+  if (!data) return;
+  howieYearBar.querySelectorAll(".howie-year").forEach((btn) => {
+    btn.classList.toggle("is-on", Number(btn.dataset.year) === year);
+  });
+  const chipNote = data.chip ? `<p class="howie-chip">Chip Kelly had personnel. Still on the mountain so the record is honest.</p>` : "";
+  howieBoard.innerHTML = `
+    <div class="howie-summary">
+      <p class="eyebrow">${data.tag}</p>
+      <h3>${data.year}</h3>
+      ${chipNote}
+      <div class="howie-grades">
+        <p>Draft class <strong class="grade ${gradeClass(data.draftGrade)}">${data.draftGrade}</strong></p>
+        <p>Free-agent class <strong class="grade ${gradeClass(data.faGrade)}">${data.faGrade}</strong></p>
+      </div>
+    </div>
+    <div class="howie-cols">
+      <section>
+        <h4>Draft</h4>
+        <p class="howie-blurb">${data.draftNote}</p>
+        ${data.picks
+          .map(
+            (pick) => `
+          <article class="howie-row">
+            <p>${pick.rnd}</p>
+            <p><strong>${pick.name}</strong> · ${pick.pos} · ${pick.school}</p>
+            <p class="grade ${gradeClass(pick.grade)}">${pick.grade}</p>
+          </article>
+        `
+          )
+          .join("")}
+      </section>
+      <section>
+        <h4>Free agency</h4>
+        <p class="howie-blurb">${data.faNote}</p>
+        ${data.fas
+          .map(
+            (signing) => `
+          <article class="howie-row">
+            <p>${signing.how}</p>
+            <p><strong>${signing.name}</strong></p>
+            <p class="grade ${gradeClass(signing.grade)}">${signing.grade}</p>
+          </article>
+        `
+          )
+          .join("")}
+      </section>
+    </div>
+  `;
+}
+
+howieYearBar.addEventListener("click", (event) => {
+  const btn = event.target.closest(".howie-year");
+  if (!btn) return;
+  renderHowie(Number(btn.dataset.year));
+});
+
+renderHowie(2026);
