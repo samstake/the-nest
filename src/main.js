@@ -255,7 +255,6 @@ function toggleTiger() {
 
 const TIGER_DOUBLE_MS = 450;
 let lastVolumeUp = 0;
-let lastLogoTap = 0;
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && tigerOn) {
@@ -285,21 +284,12 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-function bindTigerDoubleTap(el) {
-  el.addEventListener("click", (event) => {
-    const now = Date.now();
-    if (now - lastLogoTap < TIGER_DOUBLE_MS) {
-      event.preventDefault();
-      lastLogoTap = 0;
-      toggleTiger();
-    } else {
-      lastLogoTap = now;
-    }
+const navBrand = document.querySelector("header .nav-brand");
+if (navBrand && window.matchMedia("(hover: none)").matches) {
+  navBrand.addEventListener("click", (event) => {
+    event.preventDefault();
+    toggleTiger();
   });
-}
-
-if (window.matchMedia("(hover: none)").matches) {
-  document.querySelectorAll(".nav-brand, .hero-logo").forEach(bindTigerDoubleTap);
 }
 
 const loader = document.querySelector("#loader");
