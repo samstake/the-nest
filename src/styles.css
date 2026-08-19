@@ -1263,12 +1263,12 @@ svg {
   position: fixed;
   width: 200px;
   height: 200px;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
+  left: -9999px;
+  top: 0;
+  opacity: 1;
   pointer-events: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
 
 .reveal {
@@ -1331,6 +1331,11 @@ svg {
   .nav-toggle {
     display: block;
     z-index: 50;
+  }
+
+  .nav-brand {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .hero,

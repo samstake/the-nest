@@ -164,6 +164,11 @@ const TIGER_FALLBACK = "ob8TNqQw2hY";
 let tigerPlayer;
 let tigerReady;
 let tigerOn = false;
+let tigerViaChant = false;
+
+function isMobileLayout() {
+  return window.matchMedia("(max-width: 900px)").matches;
+}
 
 function pauseChant() {
   try {
@@ -175,6 +180,18 @@ function pauseChant() {
 
 function stopTiger() {
   tigerOn = false;
+  if (tigerViaChant) {
+    tigerViaChant = false;
+    try {
+      chantPlayer?.pauseVideo?.();
+    } catch {
+      /* player may not be ready */
+    }
+    chantScreen.classList.remove("is-live");
+    chantTrack.textContent = "";
+    chantOut.textContent = "Waiting on the crowd…";
+    return;
+  }
   try {
     tigerPlayer?.pauseVideo?.();
   } catch {
@@ -185,11 +202,12 @@ function stopTiger() {
 function cueTiger(player) {
   player.unMute();
   player.setVolume(100);
-  player.loadVideoById({ videoId: TIGER.id, startSeconds: 0 });
   try {
+    player.seekTo(0, true);
     player.playVideo();
   } catch {
-    /* player may not be ready */
+    player.loadVideoById({ videoId: TIGER.id, startSeconds: 0 });
+    player.playVideo();
   }
 }
 
@@ -221,8 +239,39 @@ function getTigerPlayer(YT) {
   return tigerReady;
 }
 
+function playTigerViaChant() {
+  tigerViaChant = true;
+  activeClip = null;
+  chantScreen.classList.add("is-live");
+  chantTrack.textContent = `Now playing · ${TIGER.title}`;
+  chantOut.textContent = "Eye of the Tiger. Rocky takes the stairs.";
+
+  const cue = (player) => {
+    player.unMute();
+    player.setVolume(100);
+    player.loadVideoById({ videoId: TIGER.id, startSeconds: 0 });
+  };
+
+  if (chantPlayer?.loadVideoById) {
+    cue(chantPlayer);
+    return;
+  }
+  loadYouTubeAPI()
+    .then((YT) => getChantPlayer(YT))
+    .then((player) => {
+      if (!tigerOn) return;
+      cue(player);
+    });
+}
+
 function playTiger() {
   tigerOn = true;
+
+  if (isMobileLayout()) {
+    playTigerViaChant();
+    return;
+  }
+
   pauseChant();
   if (tigerPlayer?.loadVideoById) {
     cueTiger(tigerPlayer);
@@ -292,18 +341,18 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-const mobileNav = window.matchMedia("(max-width: 900px)");
 const navBrand = document.querySelector("header.nav .nav-brand");
 
-function onNavBrandTap(event) {
-  if (!mobileNav.matches) return;
-  if (event.pointerType === "mouse") return;
-  event.preventDefault();
-  toggleTiger();
-}
-
 if (navBrand) {
-  navBrand.addEventListener("pointerup", onNavBrandTap);
+  navBrand.addEventListener(
+    "click",
+    (event) => {
+      if (!isMobileLayout()) return;
+      event.preventDefault();
+      toggleTiger();
+    },
+    true
+  );
 }
 
 const loader = document.querySelector("#loader");
