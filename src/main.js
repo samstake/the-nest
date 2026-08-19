@@ -162,7 +162,6 @@ function playCall(key) {
     });
 }
 
-const tigerEgg = document.querySelector("#tigerEgg");
 const TIGER_FALLBACK = "ob8TNqQw2hY";
 let tigerPlayer;
 let tigerReady;
@@ -178,8 +177,6 @@ function pauseChant() {
 
 function stopTiger() {
   tigerOn = false;
-  tigerEgg.classList.remove("is-on");
-  tigerEgg.setAttribute("aria-hidden", "true");
   try {
     tigerPlayer?.pauseVideo?.();
   } catch {
@@ -187,27 +184,28 @@ function stopTiger() {
   }
 }
 
+function cueTiger(player) {
+  player.unMute();
+  player.setVolume(100);
+  player.loadVideoById({ videoId: TIGER.id, startSeconds: 0 });
+}
+
 function playTiger() {
   tigerOn = true;
-  tigerEgg.classList.add("is-on");
-  tigerEgg.setAttribute("aria-hidden", "false");
   pauseChant();
-  const start = () => {
-    tigerPlayer.loadVideoById({ videoId: TIGER.id, startSeconds: 0 });
-  };
   if (tigerPlayer?.loadVideoById) {
-    start();
+    cueTiger(tigerPlayer);
     return;
   }
   loadYouTubeAPI().then((YT) => {
     if (tigerReady) {
-      tigerReady.then(start);
+      tigerReady.then(() => cueTiger(tigerPlayer));
       return;
     }
     tigerReady = new Promise((resolve) => {
       tigerPlayer = new YT.Player("tigerPlayer", {
-        width: "100%",
-        height: "100%",
+        width: 200,
+        height: 200,
         videoId: TIGER.id,
         playerVars: {
           autoplay: 1,
@@ -218,11 +216,16 @@ function playTiger() {
         },
         events: {
           onReady: (event) => {
+            event.target.unMute();
+            event.target.setVolume(100);
             event.target.playVideo();
             resolve(tigerPlayer);
           },
           onError: () => {
             tigerPlayer.loadVideoById({ videoId: TIGER_FALLBACK });
+          },
+          onStateChange: (event) => {
+            if (event.data === YT.PlayerState.ENDED) tigerOn = false;
           },
         },
       });
@@ -252,10 +255,6 @@ window.addEventListener("keydown", (event) => {
   event.preventDefault();
   if (tigerOn) stopTiger();
   else playTiger();
-});
-
-tigerEgg.addEventListener("click", (event) => {
-  if (event.target === tigerEgg) stopTiger();
 });
 
 const loader = document.querySelector("#loader");
