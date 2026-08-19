@@ -145,6 +145,7 @@ function getChantPlayer(YT) {
 }
 
 function playCall(key) {
+  stopTiger();
   const clip = { ...tracks[key], usedFallback: false };
   activeClip = clip;
   chantScreen.classList.add("is-live");
@@ -160,6 +161,102 @@ function playCall(key) {
       showClip(clip);
     });
 }
+
+const tigerEgg = document.querySelector("#tigerEgg");
+const TIGER_FALLBACK = "ob8TNqQw2hY";
+let tigerPlayer;
+let tigerReady;
+let tigerOn = false;
+
+function pauseChant() {
+  try {
+    chantPlayer?.pauseVideo?.();
+  } catch {
+    /* player may not be ready */
+  }
+}
+
+function stopTiger() {
+  tigerOn = false;
+  tigerEgg.classList.remove("is-on");
+  tigerEgg.setAttribute("aria-hidden", "true");
+  try {
+    tigerPlayer?.pauseVideo?.();
+  } catch {
+    /* player may not be ready */
+  }
+}
+
+function playTiger() {
+  tigerOn = true;
+  tigerEgg.classList.add("is-on");
+  tigerEgg.setAttribute("aria-hidden", "false");
+  pauseChant();
+  const start = () => {
+    tigerPlayer.loadVideoById({ videoId: TIGER.id, startSeconds: 0 });
+  };
+  if (tigerPlayer?.loadVideoById) {
+    start();
+    return;
+  }
+  loadYouTubeAPI().then((YT) => {
+    if (tigerReady) {
+      tigerReady.then(start);
+      return;
+    }
+    tigerReady = new Promise((resolve) => {
+      tigerPlayer = new YT.Player("tigerPlayer", {
+        width: "100%",
+        height: "100%",
+        videoId: TIGER.id,
+        playerVars: {
+          autoplay: 1,
+          rel: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          origin: window.location.origin,
+        },
+        events: {
+          onReady: (event) => {
+            event.target.playVideo();
+            resolve(tigerPlayer);
+          },
+          onError: () => {
+            tigerPlayer.loadVideoById({ videoId: TIGER_FALLBACK });
+          },
+        },
+      });
+    });
+  });
+}
+
+function typingTarget(node) {
+  if (!node || node === document.body || node === document.documentElement) {
+    return false;
+  }
+  const tag = node.tagName;
+  if (["INPUT", "TEXTAREA", "SELECT"].includes(tag)) return true;
+  if (node.isContentEditable) return true;
+  return false;
+}
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && tigerOn) {
+    stopTiger();
+    return;
+  }
+  if (event.code !== "KeyT") return;
+  if (event.repeat || event.metaKey || event.ctrlKey || event.altKey) return;
+  if (typingTarget(event.target)) return;
+  if (document.querySelector("dialog[open]")) return;
+  event.preventDefault();
+  if (tigerOn) stopTiger();
+  else playTiger();
+});
+
+tigerEgg.addEventListener("click", (event) => {
+  if (event.target === tigerEgg) stopTiger();
+});
 
 const loader = document.querySelector("#loader");
 const cursor = document.querySelector(".cursor");
