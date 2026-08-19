@@ -341,19 +341,23 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-const navBrand = document.querySelector("header.nav .nav-brand");
-
-if (navBrand) {
-  navBrand.addEventListener(
+function bindMobileTigerTrigger(el, preventNav = false) {
+  el.addEventListener(
     "click",
     (event) => {
       if (!isMobileLayout()) return;
-      event.preventDefault();
+      if (preventNav) event.preventDefault();
       toggleTiger();
     },
     true
   );
 }
+
+const navBrand = document.querySelector("header.nav .nav-brand");
+const heroLogo = document.querySelector(".hero-logo");
+
+if (navBrand) bindMobileTigerTrigger(navBrand, true);
+if (heroLogo) bindMobileTigerTrigger(heroLogo);
 
 const loader = document.querySelector("#loader");
 const cursor = document.querySelector(".cursor");

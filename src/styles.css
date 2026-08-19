@@ -1338,6 +1338,12 @@ svg {
     -webkit-tap-highlight-color: transparent;
   }
 
+  .hero-logo {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+
   .hero,
   .blood,
   .birds,
