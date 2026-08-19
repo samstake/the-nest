@@ -19,7 +19,7 @@ const games = [
   { week: "WK 15", opponent: "Seattle Seahawks", opp: "seahawks", logo: "/logos/seahawks.svg", when: "Sat Dec 19 · 5:00 PM · FOX", loc: "home", tags: ["home"] },
   { week: "WK 16", opponent: "Houston Texans", opp: "texans", logo: "/logos/texans.svg", when: "Thu Dec 24 · 8:15 PM · Prime", loc: "home", tags: ["home", "prime"] },
   { week: "WK 17", opponent: "San Francisco 49ers", opp: "49ers", logo: "/logos/49ers.svg", when: "Sun Jan 3 · 8:20 PM · NBC", loc: "away", tags: ["away", "prime"] },
-  { week: "WK 18", opponent: "New York Giants", opp: "giants", logo: "/logos/giants.svg", when: "Date TBD", loc: "away", tags: ["away"] },
+  { week: "WK 18", opponent: "New York Giants", opp: "giants", logo: "/logos/giants.svg", when: "Date TBD · flex week", loc: "away", tags: ["away"] },
 ];
 
 const ROCKY = {
