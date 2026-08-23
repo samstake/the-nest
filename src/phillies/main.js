@@ -2,12 +2,12 @@ import "../styles.css";
 import "../shared/league.css";
 import "../shared/team.css";
 import { initLeagueNav, initSharedChrome } from "../shared/league.js";
-import { roster, schedule, legends, worldSeries, chants } from "./data.js";
+import { initRoster } from "../shared/roster.js";
+import { schedule, legends, worldSeries, chants } from "./data.js";
 
 initLeagueNav("phillies");
 initSharedChrome();
 
-const squadEl = document.querySelector("#squadGrid");
 const legendsEl = document.querySelector("#legendsWall");
 const gamesEl = document.querySelector("#games");
 const wsEl = document.querySelector("#wsTimeline");
@@ -38,18 +38,6 @@ function loadYouTubeAPI() {
   });
   return ytLoader;
 }
-
-squadEl.innerHTML = roster
-  .map(
-    (p) => `
-  <article class="squad-card">
-    <p class="num">${p.num}</p>
-    <h3>${p.name}</h3>
-    <p class="role">${p.role}</p>
-    <p>${p.note}</p>
-  </article>`
-  )
-  .join("");
 
 legendsEl.innerHTML = legends
   .map(
@@ -90,6 +78,7 @@ function renderGames(filter = "all") {
     .join("");
 }
 
+initRoster("phillies", "#rosterList");
 renderGames();
 
 filters.forEach((btn) => {

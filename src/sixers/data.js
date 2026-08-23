@@ -1,21 +1,21 @@
-export const roster = [
-  { id: "embiid", num: "21", name: "Joel Embiid", role: "C · Captain", note: "2023 MVP. The Process personified." },
-  { id: "maxey", num: "0", name: "Tyrese Maxey", role: "PG", note: "Fastest guard in the East. Maxey for three." },
-  { id: "george", num: "8", name: "Paul George", role: "F", note: "PG-13 homecoming. Two-way wing." },
-  { id: "oden", num: "35", name: "Andre Drummond", role: "C", note: "Boards and bruises off the bench." },
-  { id: "bane", num: "45", name: "Dominick Barlow", role: "F", note: "Young wing with length." },
-  { id: "edge", num: "25", name: "Quentin Grimes", role: "G", note: "Three-and-D spark." },
-];
-
 export const schedule = [
-  { week: "OCT 22", opponent: "Milwaukee Bucks", when: "Tue · 7:30 PM · NBCS", loc: "home", tags: ["home"] },
-  { week: "OCT 25", opponent: "Charlotte Hornets", when: "Fri · 7:00 PM · NBCS", loc: "away", tags: ["away"] },
-  { week: "OCT 27", opponent: "Indiana Pacers", when: "Sun · 6:00 PM · NBCS", loc: "home", tags: ["home"] },
-  { week: "OCT 30", opponent: "Boston Celtics", when: "Wed · 7:30 PM · ESPN", loc: "away", tags: ["away", "prime"] },
-  { week: "NOV 2", opponent: "Brooklyn Nets", when: "Sat · 7:00 PM · NBCS", loc: "home", tags: ["home"] },
-  { week: "NOV 4", opponent: "Cleveland Cavaliers", when: "Mon · 7:00 PM · NBCS", loc: "away", tags: ["away"] },
-  { week: "NOV 8", opponent: "Los Angeles Lakers", when: "Fri · 7:30 PM · ESPN", loc: "home", tags: ["home", "prime"] },
-  { week: "NOV 10", opponent: "Bye stretch", when: "Recovery week", loc: "bye", tags: [] },
+  { week: "OCT 5", opponent: "New York Knicks", when: "Sun · Preseason · 7:00 PM · NBCS", loc: "home", tags: ["home"] },
+  { week: "OCT 20", opponent: "New York Knicks", when: "Tue · 7:30 PM · TNT", loc: "away", tags: ["away", "prime"] },
+  { week: "OCT 22", opponent: "Boston Celtics", when: "Thu · 7:30 PM · ESPN", loc: "home", tags: ["home", "prime"] },
+  { week: "OCT 25", opponent: "Charlotte Hornets", when: "Sat · 7:00 PM · NBCS", loc: "away", tags: ["away"] },
+  { week: "OCT 27", opponent: "Indiana Pacers", when: "Mon · 7:00 PM · NBCS", loc: "home", tags: ["home"] },
+  { week: "NOV 1", opponent: "Los Angeles Lakers", when: "Sat · 7:30 PM · ABC", loc: "home", tags: ["home", "prime"] },
+  { week: "NOV 4", opponent: "Cleveland Cavaliers", when: "Tue · 7:00 PM · NBCS", loc: "away", tags: ["away"] },
+  { week: "NOV 8", opponent: "Miami Heat", when: "Sat · 8:00 PM · NBCS", loc: "away", tags: ["away"] },
+  { week: "NOV 12", opponent: "Milwaukee Bucks", when: "Wed · 7:30 PM · ESPN", loc: "home", tags: ["home", "prime"] },
+  { week: "NOV 15", opponent: "Brooklyn Nets", when: "Sat · 7:00 PM · NBCS", loc: "home", tags: ["home"] },
+  { week: "NOV 22", opponent: "Denver Nuggets", when: "Sat · 9:00 PM · NBCS", loc: "away", tags: ["away", "prime"] },
+  { week: "DEC 6", opponent: "Golden State Warriors", when: "Sat · 8:30 PM · ABC", loc: "home", tags: ["home", "prime"] },
+  { week: "DEC 25", opponent: "Boston Celtics", when: "Thu · 2:30 PM · ESPN", loc: "away", tags: ["away", "prime"] },
+  { week: "JAN 15", opponent: "Oklahoma City Thunder", when: "Thu · 7:00 PM · TNT", loc: "home", tags: ["home", "prime"] },
+  { week: "FEB 14", opponent: "New York Knicks", when: "Sat · 7:30 PM · ABC", loc: "home", tags: ["home", "prime"] },
+  { week: "MAR 4", opponent: "Los Angeles Lakers", when: "Wed · 10:30 PM · ESPN", loc: "away", tags: ["away", "prime"] },
+  { week: "APR 12", opponent: "Regular season finale", when: "Sun · TBD · NBCS", loc: "home", tags: ["home"] },
 ];
 
 export const legends = [

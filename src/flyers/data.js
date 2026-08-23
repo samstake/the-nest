@@ -1,21 +1,52 @@
-export const roster = [
-  { num: "28", name: "Claude Giroux", role: "C · Captain", note: "The Captain. Franchise points leader. Flyers forever." },
-  { num: "79", name: "Carter Hart", role: "G", note: "Net minder. Steady when the orange storm hits." },
-  { num: "25", name: "James van Riemsdyk", role: "LW", note: "Net-front presence. Power play staple." },
-  { num: "21", name: "Scott Laughton", role: "C", note: "Energy line motor. Broad Street heart." },
-  { num: "8", name: "Cam York", role: "D", note: "Young blue-line quarterback." },
-  { num: "92", name: "Nicolas Deslauriers", role: "LW", note: "Physicality on demand. Bullies DNA." },
+export const schedule = [
+  { week: "OCT 8", opponent: "New Jersey Devils", when: "Wed · 7:00 PM · NBCSP", loc: "home", tags: ["home"] },
+  { week: "OCT 10", opponent: "Washington Capitals", when: "Fri · 7:00 PM · NBCSP", loc: "away", tags: ["away"] },
+  { week: "OCT 14", opponent: "Edmonton Oilers", when: "Tue · 7:00 PM · TNT", loc: "home", tags: ["home", "prime"] },
+  { week: "OCT 17", opponent: "Vancouver Canucks", when: "Fri · 7:00 PM · NBCSP", loc: "home", tags: ["home"] },
+  { week: "OCT 19", opponent: "Minnesota Wild", when: "Sun · 5:00 PM · NHLN", loc: "away", tags: ["away"] },
+  { week: "OCT 22", opponent: "Pittsburgh Penguins", when: "Wed · 7:00 PM · ESPN", loc: "home", tags: ["home", "prime"] },
+  { week: "OCT 26", opponent: "New York Rangers", when: "Sun · 7:00 PM · ABC", loc: "away", tags: ["away", "prime"] },
+  { week: "NOV 1", opponent: "Boston Bruins", when: "Sat · 7:00 PM · NBCSP", loc: "home", tags: ["home"] },
+  { week: "NOV 8", opponent: "Carolina Hurricanes", when: "Sat · 7:00 PM · ESPN", loc: "away", tags: ["away", "prime"] },
+  { week: "NOV 15", opponent: "Toronto Maple Leafs", when: "Sat · 7:00 PM · NHLN", loc: "home", tags: ["home"] },
+  { week: "DEC 6", opponent: "Pittsburgh Penguins", when: "Sat · 7:00 PM · NBCSP", loc: "away", tags: ["away"] },
+  { week: "DEC 31", opponent: "New York Islanders", when: "Wed · 1:00 PM · NBCSP", loc: "home", tags: ["home"] },
+  { week: "JAN 10", opponent: "Tampa Bay Lightning", when: "Sat · 7:00 PM · ABC", loc: "home", tags: ["home", "prime"] },
+  { week: "FEB 14", opponent: "Pittsburgh Penguins", when: "Sat · 7:00 PM · NBCSP", loc: "home", tags: ["home", "prime"] },
+  { week: "MAR 7", opponent: "Carolina Hurricanes", when: "Sat · 7:00 PM · ESPN", loc: "home", tags: ["home", "prime"] },
+  { week: "APR 11", opponent: "Regular season finale", when: "Sat · TBD · NBCSP", loc: "away", tags: ["away"] },
 ];
 
-export const schedule = [
-  { week: "OCT 10", opponent: "New Jersey Devils", when: "Thu · 7:00 PM · NBCSP", loc: "home", tags: ["home"] },
-  { week: "OCT 12", opponent: "Washington Capitals", when: "Sat · 7:00 PM · NBCSP", loc: "away", tags: ["away"] },
-  { week: "OCT 15", opponent: "Edmonton Oilers", when: "Tue · 7:00 PM · TNT", loc: "home", tags: ["home", "prime"] },
-  { week: "OCT 17", opponent: "Vancouver Canucks", when: "Thu · 7:00 PM · NBCSP", loc: "home", tags: ["home"] },
-  { week: "OCT 19", opponent: "Minnesota Wild", when: "Sat · 8:00 PM · NHLN", loc: "away", tags: ["away"] },
-  { week: "OCT 22", opponent: "Pittsburgh Penguins", when: "Tue · 7:00 PM · ESPN", loc: "home", tags: ["home", "prime"] },
-  { week: "OCT 26", opponent: "New York Rangers", when: "Sat · 7:00 PM · ABC", loc: "away", tags: ["away", "prime"] },
-];
+export const playoffRun = {
+  headline: "The 2026 run",
+  subhead: "First playoff series win since 2012. Orange storm through Round 1. Heartbreak in Round 2.",
+  rounds: [
+    {
+      title: "Round 1 · vs Pittsburgh Penguins",
+      result: "Flyers win 4–2",
+      note: "Dan Vladar stole Game 6 with 42 saves. Cam York ended it in overtime. Porter Martone scored game-winners in Games 1 and 2 — the first teenager in NHL history to do that in his first two playoff games.",
+    },
+    {
+      title: "Round 2 · vs Carolina Hurricanes",
+      result: "Hurricanes win 4–0",
+      note: "The run ended on Broad Street, but the city felt it. Trevor Zegras and Travis Konecny kept the offense alive. Matvei Michkov flashed star power. The orange was back.",
+    },
+  ],
+  moments: [
+    {
+      title: "Martone makes history",
+      detail: "Teenager Porter Martone — GWG in Games 1 and 2 vs Pittsburgh. The Wells Fargo Center lost its mind twice.",
+    },
+    {
+      title: "York in overtime",
+      detail: "Cam York's series-clinching OT goal in Game 6. The blue line became Broad Street legend.",
+    },
+    {
+      title: "Vladar's wall",
+      detail: "42 saves in the closeout. Dan Vladar went from backup to playoff hero overnight.",
+    },
+  ],
+};
 
 export const bullies = [
   { name: "Dave Schultz", stat: "472 PIM · 1974", note: "The Hammer. Enforcer of the Bullies dynasty." },

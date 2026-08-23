@@ -1,0 +1,28 @@
+{
+  "team": "nest",
+  "season": "2026",
+  "updated": "2026-08-23",
+  "starMonth": "2026-08",
+  "stars": ["hurts", "barkley", "smith", "carter", "mitchell", "johnson"],
+  "players": [
+    { "id": "baun", "name": "Zack Baun", "num": "53", "role": "LB · Fangio's green-dot", "photo": "/players/baun.jpg" },
+    { "id": "barkley", "name": "Saquon Barkley", "num": "26", "role": "RB · House-call back", "photo": "/players/barkley.jpg" },
+    { "id": "bell", "name": "Markel Bell", "num": "68", "role": "OT · R3 · Miami", "photo": "/logos/eagles.svg" },
+    { "id": "bernard", "name": "Uar Bernard", "num": "91", "role": "DT · R7 · IPP", "photo": "/logos/eagles.svg" },
+    { "id": "carter", "name": "Jalen Carter", "num": "98", "role": "DT · Interior terror", "photo": "/players/carter.png" },
+    { "id": "dejean", "name": "Cooper DeJean", "num": "33", "role": "DB · Iowa ice", "photo": "/players/dejean.jpg" },
+    { "id": "elliott", "name": "Jake Elliott", "num": "04", "role": "K · Clutch in midnight", "photo": "/players/elliott.jpg" },
+    { "id": "goedert", "name": "Dallas Goedert", "num": "88", "role": "TE · Safety valve, then dagger", "photo": "/players/goedert.jpg" },
+    { "id": "hurts", "name": "Jalen Hurts", "num": "01", "role": "QB · The engine", "photo": "/players/hurts.jpg" },
+    { "id": "jamesnewby", "name": "Keyshawn James-Newby", "num": "58", "role": "EDGE · R7 · New Mexico", "photo": "/logos/eagles.svg" },
+    { "id": "johnson", "name": "Lane Johnson", "num": "65", "role": "OT · Future gold jacket", "photo": "/players/johnson.jpg" },
+    { "id": "lemon", "name": "Makai Lemon", "num": "09", "role": "WR · R1 · USC", "photo": "/players/lemon.jpg" },
+    { "id": "mailata", "name": "Jordan Mailata", "num": "68", "role": "OT · Rugby wrecking ball", "photo": "/players/mailata.jpg" },
+    { "id": "mitchell", "name": "Quinyon Mitchell", "num": "27", "role": "CB · Shutdown draft", "photo": "/players/mitchell.jpg" },
+    { "id": "morris", "name": "Micah Morris", "num": "76", "role": "G · R6 · Georgia", "photo": "/logos/eagles.svg" },
+    { "id": "payton", "name": "Cole Payton", "num": "16", "role": "QB · R5 · NDSU", "photo": "/logos/eagles.svg" },
+    { "id": "smith", "name": "DeVonta Smith", "num": "06", "role": "WR · Silk and spite", "photo": "/players/smith.jpg" },
+    { "id": "stowers", "name": "Eli Stowers", "num": "87", "role": "TE · R2 · Vanderbilt", "photo": "/logos/eagles.svg" },
+    { "id": "wisniewski", "name": "Cole Wisniewski", "num": "32", "role": "S · R7 · Texas Tech", "photo": "/logos/eagles.svg" }
+  ]
+}

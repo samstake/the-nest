@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "hot-philly:update": "node scripts/update-hot-philly.mjs"
+    "hot-philly:update": "node scripts/update-hot-philly.mjs",
+    "rosters:update": "node scripts/update-rosters-weekly.mjs"
   },
   "devDependencies": {
     "vite": "^6.3.5"

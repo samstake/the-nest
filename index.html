@@ -112,110 +112,11 @@
         <div class="section-head">
           <p class="eyebrow">The 2026 flock</p>
           <h2>Names you already know.<br />Numbers you already fear.</h2>
+          <p class="schedule-hint">Alphabetical roster — tap a name for stats. Gold = this month's top six.</p>
         </div>
 
-        <div class="roster" id="roster">
-          <article class="player" data-id="hurts" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/hurts.jpg" alt="Jalen Hurts at Eagles training camp" />
-            <p class="player-num">01</p>
-            <div class="player-meta">
-              <h3>Jalen Hurts</h3>
-              <p>QB · The engine</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="barkley" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/barkley.jpg" alt="Saquon Barkley" />
-            <p class="player-num">26</p>
-            <div class="player-meta">
-              <h3>Saquon Barkley</h3>
-              <p>RB · House-call back</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="smith" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/smith.jpg" alt="DeVonta Smith in Eagles green" />
-            <p class="player-num">06</p>
-            <div class="player-meta">
-              <h3>DeVonta Smith</h3>
-              <p>WR · Silk and spite</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="goedert" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/goedert.jpg" alt="Dallas Goedert after a catch" />
-            <p class="player-num">88</p>
-            <div class="player-meta">
-              <h3>Dallas Goedert</h3>
-              <p>TE · Safety valve, then dagger</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="johnson" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/johnson.jpg" alt="Lane Johnson at training camp" />
-            <p class="player-num">65</p>
-            <div class="player-meta">
-              <h3>Lane Johnson</h3>
-              <p>OT · Future gold jacket</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="mailata" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/mailata.jpg" alt="Jordan Mailata" />
-            <p class="player-num">68</p>
-            <div class="player-meta">
-              <h3>Jordan Mailata</h3>
-              <p>OT · Rugby wrecking ball</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="carter" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/carter.png" alt="Jalen Carter" />
-            <p class="player-num">98</p>
-            <div class="player-meta">
-              <h3>Jalen Carter</h3>
-              <p>DT · Interior terror</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="baun" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/baun.jpg" alt="Zack Baun" />
-            <p class="player-num">53</p>
-            <div class="player-meta">
-              <h3>Zack Baun</h3>
-              <p>LB · Fangio’s green-dot</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="mitchell" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/mitchell.jpg" alt="Quinyon Mitchell" />
-            <p class="player-num">27</p>
-            <div class="player-meta">
-              <h3>Quinyon Mitchell</h3>
-              <p>CB · Shutdown draft</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="dejean" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/dejean.jpg" alt="Cooper DeJean" />
-            <p class="player-num">33</p>
-            <div class="player-meta">
-              <h3>Cooper DeJean</h3>
-              <p>DB · Iowa ice</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-          <article class="player" data-id="elliott" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/elliott.jpg" alt="Jake Elliott" />
-            <p class="player-num">04</p>
-            <div class="player-meta">
-              <h3>Jake Elliott</h3>
-              <p>K · Clutch in midnight</p>
-              <p class="player-hint">Click for stats</p>
-            </div>
-          </article>
-        </div>
-        <p class="photo-credit">Portraits via Wikimedia Commons. A few are college-era when that is the free file on record. Sirianni portrait from Lincoln Financial Field, 2022.</p>
+        <div id="rosterList"></div>
+        <p class="photo-credit">Portraits via Wikimedia Commons where available. Rookies use the Eagles mark until a free photo is on record.</p>
 
         <aside class="staff">
           <div>
@@ -244,83 +145,8 @@
         <div class="section-head">
           <p class="eyebrow">The 2026 class</p>
           <h2>New birds in the nest.</h2>
-          <p class="schedule-hint">Click a rookie for college stats and the school that sent him.</p>
+          <p class="schedule-hint">The full 2026 draft class lives in the alphabetical roster above — look for R1–R7 tags. Tap any name for college stats.</p>
         </div>
-        <div class="roster" id="rookieRoster">
-          <article class="player" data-id="lemon" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/players/lemon.jpg" alt="Makai Lemon" />
-            <p class="player-num">R1</p>
-            <div class="player-meta">
-              <h3>Makai Lemon</h3>
-              <p>WR · USC</p>
-              <p class="player-hint">Click for college stats</p>
-            </div>
-          </article>
-          <article class="player player-logo" data-id="stowers" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/logos/eagles.svg" alt="" />
-            <p class="player-num">R2</p>
-            <div class="player-meta">
-              <h3>Eli Stowers</h3>
-              <p>TE · Vanderbilt</p>
-              <p class="player-hint">Click for college stats</p>
-            </div>
-          </article>
-          <article class="player player-logo" data-id="bell" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/logos/eagles.svg" alt="" />
-            <p class="player-num">R3</p>
-            <div class="player-meta">
-              <h3>Markel Bell</h3>
-              <p>OT · Miami</p>
-              <p class="player-hint">Click for college stats</p>
-            </div>
-          </article>
-          <article class="player player-logo" data-id="payton" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/logos/eagles.svg" alt="" />
-            <p class="player-num">R5</p>
-            <div class="player-meta">
-              <h3>Cole Payton</h3>
-              <p>QB · North Dakota State</p>
-              <p class="player-hint">Click for college stats</p>
-            </div>
-          </article>
-          <article class="player player-logo" data-id="morris" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/logos/eagles.svg" alt="" />
-            <p class="player-num">R6</p>
-            <div class="player-meta">
-              <h3>Micah Morris</h3>
-              <p>G · Georgia</p>
-              <p class="player-hint">Click for college stats</p>
-            </div>
-          </article>
-          <article class="player player-logo" data-id="wisniewski" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/logos/eagles.svg" alt="" />
-            <p class="player-num">R7</p>
-            <div class="player-meta">
-              <h3>Cole Wisniewski</h3>
-              <p>S · Texas Tech</p>
-              <p class="player-hint">Click for college stats</p>
-            </div>
-          </article>
-          <article class="player player-logo" data-id="bernard" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/logos/eagles.svg" alt="" />
-            <p class="player-num">R7</p>
-            <div class="player-meta">
-              <h3>Uar Bernard</h3>
-              <p>DT · IPP / Nigeria</p>
-              <p class="player-hint">Click for path</p>
-            </div>
-          </article>
-          <article class="player player-logo" data-id="jamesnewby" tabindex="0" role="button" aria-haspopup="dialog">
-            <img src="/logos/eagles.svg" alt="" />
-            <p class="player-num">R7</p>
-            <div class="player-meta">
-              <h3>Keyshawn James-Newby</h3>
-              <p>EDGE · New Mexico</p>
-              <p class="player-hint">Click for college stats</p>
-            </div>
-          </article>
-        </div>
-        <p class="photo-credit">Lemon portrait via Wikimedia. Other rookies use the current Eagles mark until a free photo is on record.</p>
       </section>
 
       <section class="schedule" id="schedule">
