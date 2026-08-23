@@ -7,7 +7,7 @@
     <title>THE PROCESS — Philadelphia 76ers Fandom</title>
     <meta
       name="description"
-      content="Trust the Process. A blue-and-red shrine to the Philadelphia 76ers."
+      content="Trust the Process. A blue-and-red shrine to the Philadelphia 76ers — plus the LeBron James shrine."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,6 +39,7 @@
         <a href="#schedule">Schedule</a>
         <a href="#lebron">LeBron</a>
         <a href="#legends">Legends</a>
+        <a href="#chant">Chant</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span>
@@ -66,10 +67,89 @@
         </div>
       </section>
 
+      <section class="ticker" aria-label="Franchise marks">
+        <div class="ticker-track">
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>1983 NBA champions</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Dr. J · AI · Wilt · Moses</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Trust the Process</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Embiid MVP 2023</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>1983 NBA champions</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Dr. J · AI · Wilt · Moses</span>
+        </div>
+      </section>
+
       <section class="birds" id="squad">
-        <p class="eyebrow">The roster</p>
+        <p class="eyebrow">The squad</p>
         <h2>Built for Broad Street.</h2>
-        <p class="section-lead">Full squad board coming in Phase 2.</p>
+        <p class="section-lead">Embiid, Maxey, and the 2025–26 core chasing Banner 17.</p>
+        <div class="squad-grid" id="squadGrid"></div>
+      </section>
+
+      <section class="schedule" id="schedule">
+        <p class="eyebrow">The slate</p>
+        <h2>2025–26 schedule.</h2>
+        <div class="filter-bar">
+          <button class="filter is-on" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="home" type="button">Home</button>
+          <button class="filter" data-filter="away" type="button">Road</button>
+          <button class="filter" data-filter="prime" type="button">Prime</button>
+        </div>
+        <div class="games" id="games"></div>
+      </section>
+
+      <section class="lebron" id="lebron">
+        <div class="lebron-inner birds">
+          <p class="lebron-crown" aria-hidden="true">👑</p>
+          <p class="eyebrow">The shrine</p>
+          <h2>King James at the Center</h2>
+          <p class="lebron-lead">
+            LeBron James never wore Sixers blue — and yet Wells Fargo Center belongs to him
+            every time he walks in. Each game. Each highlight reel. A shrine to the greatest
+            visitor South Philly ever booed with love.
+          </p>
+          <div class="lebron-grid" id="lebronGrid"></div>
+          <div class="lebron-board">
+            <div class="lebron-screen" id="lebronScreen">
+              <div id="lebronPlayer"></div>
+              <p class="lebron-idle" id="lebronIdle">Pick a game. Watch the King.</p>
+            </div>
+            <p class="lebron-track" id="lebronTrack"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="legends" id="legends">
+        <p class="eyebrow">The franchise</p>
+        <h2>Sixers legends.</h2>
+        <div class="legend-wall sixers-wall" id="legendsWall"></div>
+      </section>
+
+      <section class="chant" id="chant">
+        <div class="chant-inner">
+          <p class="eyebrow">The noise</p>
+          <h2>Hit the call.</h2>
+          <p class="chant-lead">Mash a pad. Bring the Center to your speakers.</p>
+          <div class="pads" id="pads">
+            <button class="pad" data-call="process" type="button">TRUST THE PROCESS</button>
+            <button class="pad" data-call="maxey" type="button">MAXEY FOR THREE</button>
+            <button class="pad" data-call="embiid" type="button">M-V-P</button>
+            <button class="pad" data-call="bell" type="button">RING THE BELL</button>
+          </div>
+          <div class="chant-board">
+            <div class="chant-screen" id="chantScreen">
+              <div id="chantPlayer"></div>
+              <p class="chant-idle">Jumbotron dark. Hit a pad.</p>
+            </div>
+            <p class="chant-track" id="chantTrack"></p>
+          </div>
+          <p class="chant-output" id="chantOut" aria-live="polite">Waiting on the crowd…</p>
+        </div>
       </section>
     </main>
 
@@ -84,6 +164,6 @@
       <p class="foot-end">Built in Sixers blue · 2026</p>
     </footer>
 
-    <script type="module" src="/src/sixers/stub.js"></script>
+    <script type="module" src="/src/sixers/main.js"></script>
   </body>
 </html>
