@@ -1,0 +1,204 @@
+.bullies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.bully-card {
+  border: 1px solid var(--line);
+  padding: 24px;
+  background: linear-gradient(145deg, rgba(247, 73, 2, 0.15), transparent);
+}
+
+.bully-card h3 {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.bully-card .stat {
+  color: var(--mint);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.bully-card p {
+  margin-top: 10px;
+  color: var(--silver);
+  font-size: 14px;
+}
+
+.grit-meter {
+  margin-top: 40px;
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+
+.grit-meter h3 {
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.grit-bar {
+  margin-top: 16px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.grit-fill {
+  height: 100%;
+  width: 94%;
+  background: linear-gradient(90deg, var(--mint), #fff);
+  animation: grit-pulse 2s ease-in-out infinite;
+}
+
+@keyframes grit-pulse {
+  50% { opacity: 0.75; }
+}
+
+.grit-btn {
+  margin-top: 18px;
+  padding: 14px 24px;
+  border: 1px solid var(--mint);
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.grit-btn:hover {
+  background: color-mix(in srgb, var(--mint) 20%, transparent);
+}
+
+.cup-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.cup-card {
+  border: 1px solid var(--line);
+  padding: 32px;
+  text-align: center;
+}
+
+.cup-card .year {
+  font-family: var(--display);
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--mint);
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .bullies-grid,
+  .cup-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bell-shrine {
+  text-align: center;
+  padding: 48px 24px;
+  border: 1px solid var(--line);
+  margin-top: 32px;
+  background: linear-gradient(180deg, rgba(232, 24, 40, 0.1), transparent);
+}
+
+.bell-btn {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--mint);
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 24px auto 0;
+  display: grid;
+  place-items: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bell-btn.is-ringing {
+  transform: scale(0.94);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--mint) 40%, transparent);
+}
+
+.ws-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.ws-card {
+  border: 1px solid var(--line);
+  padding: 20px;
+}
+
+.ws-card .year {
+  font-family: var(--display);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--mint);
+}
+
+.ws-card p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--silver);
+}
+
+@media (max-width: 900px) {
+  .ws-timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.squad-grid,
+.legend-wall.phillies-wall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.squad-card,
+.legend-card {
+  border: 1px solid var(--line);
+  padding: 22px;
+}
+
+.squad-card .num,
+.legend-card h3 {
+  font-family: var(--display);
+  font-weight: 800;
+}
+
+.legend-card .era {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-top: 4px;
+}
+
+.squad-card .num {
+  font-size: 48px;
+  color: color-mix(in srgb, var(--mint) 55%, transparent);
+}
+
+@media (max-width: 900px) {
+  .squad-grid,
+  .legend-wall.phillies-wall {
+    grid-template-columns: 1fr;
+  }
+}

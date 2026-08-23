@@ -1,0 +1,78 @@
+.all-philly-modal {
+  width: min(640px, calc(100vw - 32px));
+  max-height: min(88vh, 900px);
+  overflow-y: auto;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background: var(--ink-2);
+  color: var(--paper);
+}
+
+.all-philly-modal::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.all-philly-modal h2 {
+  font-family: var(--display);
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 900;
+  margin-top: 8px;
+}
+
+.all-philly-lead {
+  margin-top: 10px;
+  color: var(--fog);
+  max-width: 48ch;
+}
+
+.all-philly-list {
+  list-style: none;
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.all-philly-row {
+  display: grid;
+  grid-template-columns: 36px 32px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.all-philly-rank {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--mint);
+  line-height: 1;
+}
+
+.all-philly-row strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.all-philly-team {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-left: 8px;
+}
+
+.all-philly-row p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--silver);
+}
+
+.all-philly-row:first-child {
+  border-color: var(--mint);
+  background: color-mix(in srgb, var(--mint) 8%, transparent);
+}

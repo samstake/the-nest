@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-team="flyers">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logos/flyers.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE BROAD — Philadelphia Flyers Fandom</title>
+    <meta name="description" content="Orange and black forever. Broad Street Bullies. Philadelphia Flyers shrine." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="loader" id="loader">
+      <div class="loader-mark">
+        <img class="loader-logo" src="/logos/flyers.svg" alt="" />
+        <p class="loader-word">THE BROAD</p>
+      </div>
+    </div>
+    <div class="league-bar" id="leagueNav" aria-label="Philadelphia sports"></div>
+    <header class="nav">
+      <a class="nav-brand" href="#top"><img src="/logos/flyers.svg" alt="" />THE BROAD</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#squad">Squad</a>
+        <a href="#bullies">Bullies</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#blood">Blood</a>
+        <a href="#chant">Chant</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"><div class="hero-orb"></div></div>
+        <p class="hero-kicker reveal">2× Stanley Cup champions · Est. 1967</p>
+        <img class="hero-logo reveal delay-1" src="/logos/flyers.svg" alt="Philadelphia Flyers" />
+        <h1 class="hero-title">
+          <span class="reveal delay-1">LET'S</span>
+          <span class="reveal delay-2">GO</span>
+          <span class="reveal delay-3">FLYERS</span>
+        </h1>
+        <p class="hero-sub reveal delay-4">Orange crush. Broad Street Bullies energy. The Spectrum lives forever.</p>
+        <div class="hero-cta reveal delay-5">
+          <a class="btn btn-fill" href="#bullies">The Bullies</a>
+          <a class="btn btn-ghost" href="#blood">The Cups</a>
+        </div>
+      </section>
+      <section class="ticker" aria-label="Franchise marks">
+        <div class="ticker-track">
+          <img class="ticker-mark" src="/logos/flyers.svg" alt="" /><span>1974 · 1975 Stanley Cup</span>
+          <img class="ticker-mark" src="/logos/flyers.svg" alt="" /><span>Broad Street Bullies</span>
+          <img class="ticker-mark" src="/logos/flyers.svg" alt="" /><span>Orange and black</span>
+          <img class="ticker-mark" src="/logos/flyers.svg" alt="" /><span>Let's Go Flyers</span>
+        </div>
+      </section>
+      <section class="birds" id="squad">
+        <p class="eyebrow">The squad</p>
+        <h2>Orange and black.</h2>
+        <div class="squad-grid" id="squadGrid"></div>
+      </section>
+      <section class="birds" id="bullies">
+        <p class="eyebrow">Broad Street</p>
+        <h2>The Bullies.</h2>
+        <p class="section-lead">1974–75. The era that made Philadelphia hockey law.</p>
+        <div class="bullies-grid" id="bulliesGrid"></div>
+        <div class="grit-meter">
+          <h3>Grit meter</h3>
+          <p class="section-lead">How physical is tonight's game? Tap to max it out.</p>
+          <div class="grit-bar"><div class="grit-fill" id="gritFill"></div></div>
+          <button class="grit-btn" id="gritBtn" type="button">Drop the gloves</button>
+        </div>
+      </section>
+      <section class="schedule" id="schedule">
+        <p class="eyebrow">The slate</p>
+        <h2>2025–26 schedule.</h2>
+        <div class="filter-bar">
+          <button class="filter is-on" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="home" type="button">Home</button>
+          <button class="filter" data-filter="away" type="button">Road</button>
+          <button class="filter" data-filter="prime" type="button">Prime</button>
+        </div>
+        <div class="games" id="games"></div>
+      </section>
+      <section class="blood" id="blood">
+        <p class="eyebrow">The blood</p>
+        <h2>Stanley Cups.</h2>
+        <div class="cup-row">
+          <article class="cup-card"><p class="year">1974</p><p>vs Boston Bruins · Broad Street Bullies</p></article>
+          <article class="cup-card"><p class="year">1975</p><p>vs Buffalo Sabres · Repeat champions</p></article>
+        </div>
+      </section>
+      <section class="chant" id="chant">
+        <div class="chant-inner">
+          <p class="eyebrow">The noise</p>
+          <h2>Hit the call.</h2>
+          <div class="pads" id="pads">
+            <button class="pad" data-call="lgf" type="button">LET'S GO FLYERS</button>
+            <button class="pad" data-call="bullies" type="button">BROAD STREET</button>
+            <button class="pad" data-call="siren" type="button">PK SIREN</button>
+            <button class="pad" data-call="orange" type="button">ORANGE CRUSH</button>
+          </div>
+          <div class="chant-board">
+            <div class="chant-screen" id="chantScreen">
+              <div id="chantPlayer"></div>
+              <p class="chant-idle">Ice dark. Hit a pad.</p>
+            </div>
+            <p class="chant-track" id="chantTrack"></p>
+          </div>
+          <p class="chant-output" id="chantOut" aria-live="polite">Waiting on the crowd…</p>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">
+      <div>
+        <p class="nav-brand"><img src="/logos/flyers.svg" alt="" />THE BROAD</p>
+        <p>An unofficial Philadelphia Flyers fandom shrine.</p>
+      </div>
+      <p class="foot-end">Built in Flyers orange · 2026</p>
+    </footer>
+    <script type="module" src="/src/flyers/main.js"></script>
+  </body>
+</html>

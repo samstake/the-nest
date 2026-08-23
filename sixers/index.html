@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-team="sixers">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logos/sixers.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE PROCESS — Philadelphia 76ers Fandom</title>
+    <meta
+      name="description"
+      content="Trust the Process. A blue-and-red shrine to the Philadelphia 76ers — plus the LeBron James shrine."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+
+    <div class="loader" id="loader">
+      <div class="loader-mark">
+        <img class="loader-logo" src="/logos/sixers.svg" alt="" />
+        <p class="loader-word">THE PROCESS</p>
+      </div>
+    </div>
+
+    <div class="league-bar" id="leagueNav" aria-label="Philadelphia sports"></div>
+
+    <header class="nav">
+      <a class="nav-brand" href="#top">
+        <img src="/logos/sixers.svg" alt="" />
+        THE PROCESS
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#squad">Squad</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#lebron">LeBron</a>
+        <a href="#legends">Legends</a>
+        <a href="#chant">Chant</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-orb"></div>
+        </div>
+        <p class="hero-kicker reveal">3× NBA champions · Est. 1946</p>
+        <img class="hero-logo reveal delay-1" src="/logos/sixers.svg" alt="Philadelphia 76ers" />
+        <h1 class="hero-title">
+          <span class="reveal delay-1">TRUST</span>
+          <span class="reveal delay-2">THE</span>
+          <span class="reveal delay-3">PROCESS</span>
+        </h1>
+        <p class="hero-sub reveal delay-4">
+          South Broad noise. The Wells Fargo faithful. Banner 17 loading.
+        </p>
+        <div class="hero-cta reveal delay-5">
+          <a class="btn btn-fill" href="#lebron">LeBron shrine</a>
+          <a class="btn btn-ghost" href="#schedule">2025–26 slate</a>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Franchise marks">
+        <div class="ticker-track">
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>1983 NBA champions</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Dr. J · AI · Wilt · Moses</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Trust the Process</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Embiid MVP 2023</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>1983 NBA champions</span>
+          <img class="ticker-mark" src="/logos/sixers.svg" alt="" />
+          <span>Dr. J · AI · Wilt · Moses</span>
+        </div>
+      </section>
+
+      <section class="birds" id="squad">
+        <p class="eyebrow">The squad</p>
+        <h2>Built for Broad Street.</h2>
+        <p class="section-lead">Embiid, Maxey, and the 2025–26 core chasing Banner 17.</p>
+        <div class="squad-grid" id="squadGrid"></div>
+      </section>
+
+      <section class="schedule" id="schedule">
+        <p class="eyebrow">The slate</p>
+        <h2>2025–26 schedule.</h2>
+        <div class="filter-bar">
+          <button class="filter is-on" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="home" type="button">Home</button>
+          <button class="filter" data-filter="away" type="button">Road</button>
+          <button class="filter" data-filter="prime" type="button">Prime</button>
+        </div>
+        <div class="games" id="games"></div>
+      </section>
+
+      <section class="lebron" id="lebron">
+        <div class="lebron-inner birds">
+          <p class="lebron-crown" aria-hidden="true">👑</p>
+          <p class="eyebrow">The shrine</p>
+          <h2>King James at the Center</h2>
+          <p class="lebron-lead">
+            LeBron James never wore Sixers blue — and yet Wells Fargo Center belongs to him
+            every time he walks in. Each game. Each highlight reel. A shrine to the greatest
+            visitor South Philly ever booed with love.
+          </p>
+          <div class="lebron-grid" id="lebronGrid"></div>
+          <div class="lebron-board">
+            <div class="lebron-screen" id="lebronScreen">
+              <div id="lebronPlayer"></div>
+              <p class="lebron-idle" id="lebronIdle">Pick a game. Watch the King.</p>
+            </div>
+            <p class="lebron-track" id="lebronTrack"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="legends" id="legends">
+        <p class="eyebrow">The franchise</p>
+        <h2>Sixers legends.</h2>
+        <div class="legend-wall sixers-wall" id="legendsWall"></div>
+      </section>
+
+      <section class="chant" id="chant">
+        <div class="chant-inner">
+          <p class="eyebrow">The noise</p>
+          <h2>Hit the call.</h2>
+          <p class="chant-lead">Mash a pad. Bring the Center to your speakers.</p>
+          <div class="pads" id="pads">
+            <button class="pad" data-call="process" type="button">TRUST THE PROCESS</button>
+            <button class="pad" data-call="maxey" type="button">MAXEY FOR THREE</button>
+            <button class="pad" data-call="embiid" type="button">M-V-P</button>
+            <button class="pad" data-call="bell" type="button">RING THE BELL</button>
+          </div>
+          <div class="chant-board">
+            <div class="chant-screen" id="chantScreen">
+              <div id="chantPlayer"></div>
+              <p class="chant-idle">Jumbotron dark. Hit a pad.</p>
+            </div>
+            <p class="chant-track" id="chantTrack"></p>
+          </div>
+          <p class="chant-output" id="chantOut" aria-live="polite">Waiting on the crowd…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div>
+        <p class="nav-brand">
+          <img src="/logos/sixers.svg" alt="" />
+          THE PROCESS
+        </p>
+        <p>An unofficial Philadelphia 76ers fandom shrine. Not affiliated with the NBA or the club.</p>
+      </div>
+      <p class="foot-end">Built in Sixers blue · 2026</p>
+    </footer>
+
+    <script type="module" src="/src/sixers/main.js"></script>
+  </body>
+</html>
