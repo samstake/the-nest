@@ -41,9 +41,9 @@ export const chants = {
     harper: "M-V-P! M-V-P! Harper!",
   },
   tracks: {
-    bell: { id: "cugVzMthSIo", title: "Phillies home run bell" },
-    fightins: { id: "4ujS__0MQMo", title: "Fightin Phils crowd" },
-    homer: { id: "THCK0-IYHew", title: "Home run horn" },
-    harper: { id: "ioE_O7Lm0I4", title: "Harper walk-up energy" },
+    bell: { id: "8hI1ZyUm8xM", title: "Phillies home run bell and song (official)" },
+    fightins: { id: "4VMOkpm3eoA", title: "Harry Kalas sings High Hopes" },
+    homer: { id: "segXMl7ADQE", title: "Bryce BLASTS OFF in Philly" },
+    harper: { id: "s14JzAN94-w", title: "This ball is outta here — Harry Kalas" },
   },
 };

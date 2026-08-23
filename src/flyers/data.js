@@ -37,9 +37,9 @@ export const chants = {
     orange: "ORANGE CRUSH! ORANGE CRUSH!",
   },
   tracks: {
-    lgf: { id: "4ujS__0MQMo", title: "Let's Go Flyers crowd chant" },
-    bullies: { id: "ioE_O7Lm0I4", title: "Broad Street Bullies era hype" },
-    siren: { id: "cugVzMthSIo", title: "Penalty kill horn" },
-    orange: { id: "THCK0-IYHew", title: "Flyers goal horn" },
+    lgf: { id: "1RV36KTBeJc", title: "Let's Go Flyers — 2026 playoff home chant" },
+    bullies: { id: "pBJdwgQBUGY", title: "Flyers vs Penguins — 2026 playoff Game 1" },
+    siren: { id: "69tFiCjdAfo", title: "Philadelphia Flyers 2026 goal horn" },
+    orange: { id: "0CafTNq7ykQ", title: "Flyers vs Penguins — 2026 playoff Game 2" },
   },
 };

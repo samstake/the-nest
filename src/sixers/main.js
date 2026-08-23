@@ -168,7 +168,7 @@ function getChantPlayer(YT) {
     chantPlayer = new YT.Player("chantPlayer", {
       width: "100%",
       height: "100%",
-      videoId: "4ujS__0MQMo",
+      videoId: chants.tracks.process.id,
       playerVars: {
         autoplay: 0,
         rel: 0,
