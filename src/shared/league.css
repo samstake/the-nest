@@ -5,12 +5,51 @@
   right: 0;
   z-index: 60;
   display: flex;
-  justify-content: center;
-  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
   padding: 8px 12px;
   background: rgba(4, 8, 7, 0.92);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(8px);
+}
+
+.league-all-philly {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 999px;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #d4af37;
+  background: color-mix(in srgb, #d4af37 10%, transparent);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.league-all-philly:hover,
+.league-all-philly:focus-visible {
+  border-color: #d4af37;
+  background: color-mix(in srgb, #d4af37 18%, transparent);
+  outline: none;
+}
+
+.league-all-philly:active {
+  transform: scale(0.97);
+}
+
+.league-all-philly.is-here {
+  background: color-mix(in srgb, #d4af37 22%, transparent);
+  border-color: #d4af37;
+}
+
+.league-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .league-pill {
@@ -55,8 +94,19 @@
     padding: 8px 10px;
   }
 
+  .league-all-philly {
+    padding: 8px 10px;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+
   .league-bar {
-    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .league-pills {
+    gap: 4px;
   }
 }
 
