@@ -9,7 +9,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        nest: resolve(__dirname, "index.html"),
+        hub: resolve(__dirname, "index.html"),
+        nest: resolve(__dirname, "nest/index.html"),
         sixers: resolve(__dirname, "sixers/index.html"),
         flyers: resolve(__dirname, "flyers/index.html"),
         phillies: resolve(__dirname, "phillies/index.html"),

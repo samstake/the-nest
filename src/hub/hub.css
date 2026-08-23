@@ -1,0 +1,108 @@
+.league-bar--hub {
+  position: fixed;
+}
+
+.hub-page {
+  min-height: 100vh;
+  padding: 100px 24px 64px;
+}
+
+.hub-hero {
+  max-width: 920px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.hub-hero h1 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(48px, 10vw, 96px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.hub-hero p {
+  margin-top: 16px;
+  color: var(--silver);
+  font-size: 17px;
+  max-width: 48ch;
+  margin-inline: auto;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  min-height: 220px;
+}
+
+.hub-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--card-accent, var(--mint));
+}
+
+.hub-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.hub-card h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: 0.02em;
+}
+
+.hub-card .hub-team {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--card-accent, var(--mint));
+}
+
+.hub-card p {
+  color: var(--fog);
+  font-size: 14px;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.hub-card .hub-enter {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--paper);
+  opacity: 0.7;
+}
+
+.hub-card[data-site="nest"] { --card-accent: #3ddc97; }
+.hub-card[data-site="sixers"] { --card-accent: #006bb6; }
+.hub-card[data-site="flyers"] { --card-accent: #f74902; }
+.hub-card[data-site="phillies"] { --card-accent: #e81828; }
+
+.hub-foot {
+  max-width: 920px;
+  margin: 40px auto 0;
+  text-align: center;
+  color: var(--fog);
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,7 +8,7 @@ export const PHILLY_SITES = [
     id: "nest",
     name: "The Nest",
     team: "Eagles",
-    path: "/",
+    path: "/nest/",
     logo: "/logos/eagles.svg",
     accent: "#3ddc97",
   },

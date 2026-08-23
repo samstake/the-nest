@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" data-team="nest">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logos/eagles.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE NEST — Philadelphia Eagles Fandom</title>
+    <meta
+      name="description"
+      content="A midnight-green shrine to the Philadelphia Eagles. Super Bowl champions. NFC East hunters. Fly, Eagles, Fly."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+
+    <div class="loader" id="loader">
+      <div class="loader-mark">
+        <img class="loader-logo" src="/logos/eagles.svg" alt="" />
+        <p class="loader-word">THE NEST</p>
+      </div>
+    </div>
+
+    <div class="league-bar" id="leagueNav" aria-label="Philadelphia sports"></div>
+
+    <header class="nav">
+      <a class="nav-brand" href="#top">
+        <img src="/logos/eagles.svg" alt="" />
+        THE NEST
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#birds">Birds</a>
+        <a href="#rookies">Rookies</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#legends">Stars</a>
+        <a href="#howie">Howie</a>
+        <a href="#chant">Chant</a>
+        <a href="#blood">Blood</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-orb"></div>
+          <svg class="hero-wings" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice">
+            <path
+              d="M700 380 C420 300 180 140 40 40 C280 220 420 380 520 620 C560 500 620 420 700 380Z"
+            />
+            <path
+              d="M700 380 C980 300 1220 140 1360 40 C1120 220 980 380 880 620 C840 500 780 420 700 380Z"
+            />
+          </svg>
+        </div>
+
+        <p class="hero-kicker reveal">Two-time Super Bowl champions · Est. 1933</p>
+        <img class="hero-logo reveal delay-1" src="/logos/eagles.svg" alt="Philadelphia Eagles logo" />
+        <h1 class="hero-title">
+          <span class="reveal delay-1">FLY</span>
+          <span class="reveal delay-2">EAGLES</span>
+          <span class="reveal delay-3">FLY</span>
+        </h1>
+        <p class="hero-sub reveal delay-4">
+          Midnight green. South Philly noise. A city that does not ask permission.
+        </p>
+        <div class="hero-cta reveal delay-5">
+          <a class="btn btn-fill" href="#schedule">2026 slate</a>
+          <a class="btn btn-ghost" href="#blood">The trophies</a>
+        </div>
+        <div class="next-up reveal delay-5">
+          <p class="eyebrow">Next out of the tunnel</p>
+          <p><strong>Preseason · at Ravens</strong> Sat Aug 15 · 7:00 PM · M&T Bank</p>
+        </div>
+        <p class="hero-scroll">Enter the nest</p>
+      </section>
+
+      <section class="ticker" aria-label="Franchise marks">
+        <div class="ticker-track">
+          <img class="ticker-mark" src="/logos/eagles.svg" alt="" />
+          <span>2 Lombardi trophies</span>
+          <img class="ticker-mark ticker-word" src="/logos/eagles-wordmark.svg" alt="" />
+          <span>4 NFL championships</span>
+          <img class="ticker-mark" src="/logos/eagles.svg" alt="" />
+          <span>Back-to-back NFC East</span>
+          <img class="ticker-mark ticker-word" src="/logos/eagles-wordmark.svg" alt="" />
+          <span>Lincoln Financial Field</span>
+          <img class="ticker-mark" src="/logos/eagles.svg" alt="" />
+          <span>Go Birds</span>
+          <img class="ticker-mark" src="/logos/eagles.svg" alt="" />
+          <span>2 Lombardi trophies</span>
+          <img class="ticker-mark ticker-word" src="/logos/eagles-wordmark.svg" alt="" />
+          <span>4 NFL championships</span>
+          <img class="ticker-mark" src="/logos/eagles.svg" alt="" />
+          <span>Back-to-back NFC East</span>
+          <img class="ticker-mark ticker-word" src="/logos/eagles-wordmark.svg" alt="" />
+          <span>Lincoln Financial Field</span>
+          <img class="ticker-mark" src="/logos/eagles.svg" alt="" />
+          <span>Go Birds</span>
+        </div>
+      </section>
+
+      <section class="birds" id="birds">
+        <div class="section-head">
+          <p class="eyebrow">The 2026 flock</p>
+          <h2>Names you already know.<br />Numbers you already fear.</h2>
+          <p class="schedule-hint">Alphabetical roster — tap a name for stats. Gold = this month's top six.</p>
+        </div>
+
+        <div id="rosterList"></div>
+        <p class="photo-credit">Portraits via Wikimedia Commons where available. Rookies use the Eagles mark until a free photo is on record.</p>
+
+        <aside class="staff">
+          <div>
+            <p class="eyebrow">The booth</p>
+            <button class="coach" type="button" data-id="sirianni" aria-haspopup="dialog">
+              <img src="/players/sirianni.jpg" alt="Nick Sirianni" />
+              <span>
+                <strong>Nick Sirianni</strong>
+                Head coach, year six
+                <em>Click for stats</em>
+              </span>
+            </button>
+            <p><strong>Sean Mannion</strong> — Offensive coordinator</p>
+            <p><strong>Vic Fangio</strong> — Defensive coordinator</p>
+          </div>
+          <div>
+            <p class="eyebrow">The front office</p>
+            <p><strong>Jeffrey Lurie</strong> — Owner</p>
+            <p><a href="#howie"><strong>Howie Roseman</strong> — General manager</a></p>
+            <p><strong>The Linc</strong> — South Philadelphia</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="birds rookies" id="rookies">
+        <div class="section-head">
+          <p class="eyebrow">The 2026 class</p>
+          <h2>New birds in the nest.</h2>
+          <p class="schedule-hint">The full 2026 draft class lives in the alphabetical roster above — look for R1–R7 tags. Tap any name for college stats.</p>
+        </div>
+      </section>
+
+      <section class="schedule" id="schedule">
+        <div class="section-head split">
+          <div>
+            <p class="eyebrow">2026 regular season</p>
+            <h2>Seventeen games the whole world watches.</h2>
+            <p class="schedule-hint">Click a team for recent results against the Birds.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter schedule">
+            <button class="filter is-on" data-filter="all">All</button>
+            <button class="filter" data-filter="home">Home</button>
+            <button class="filter" data-filter="away">Road</button>
+            <button class="filter" data-filter="prime">Prime</button>
+          </div>
+        </div>
+
+        <div class="games" id="games"></div>
+      </section>
+
+      <section class="legends" id="legends">
+        <div class="section-head">
+          <p class="eyebrow">The wall</p>
+          <h2>Before the trophies, there were ghosts.</h2>
+        </div>
+        <div class="legend-wall">
+          <article>
+            <h3>Chuck Bednarik</h3>
+            <p>Concrete Charlie. The last sixty-minute man. 1960 still answers to him.</p>
+          </article>
+          <article>
+            <h3>Steve Van Buren</h3>
+            <p>Two titles. A runner who treated tacklers like weather.</p>
+          </article>
+          <article>
+            <h3>Reggie White</h3>
+            <p>The Minister of Defense. Pass rush as scripture.</p>
+          </article>
+          <article>
+            <h3>Randall Cunningham</h3>
+            <p>The Ultimate Weapon. Before dual-threat had a name.</p>
+          </article>
+          <article>
+            <h3>Brian Dawkins</h3>
+            <p>Weapon X. Safety play as a horror movie.</p>
+          </article>
+          <article>
+            <h3>Donovan McNabb</h3>
+            <p>Five NFC Championship games. The bridge to modern Philly.</p>
+          </article>
+          <article>
+            <h3>Jason Kelce</h3>
+            <p>The parade speech. The heartbeat in the middle.</p>
+          </article>
+          <article>
+            <h3>Fletcher Cox</h3>
+            <p>A decade of wreckage in the A-gap. Super Bowl LII muscle.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="howie" id="howie">
+        <div class="section-head">
+          <p class="eyebrow">The architect</p>
+          <h2>Howie on the mountain.</h2>
+          <p class="schedule-hint">Every draft class and free-agent class from his GM years, 2010–2026. Nest grades, not the league office.</p>
+        </div>
+
+        <figure class="rushmore">
+          <img src="/photos/howie-rushmore.png" alt="Howie Roseman carved into a Mount Rushmore homage" />
+          <figcaption>Four Howies. Two Lombardis. One mountain.</figcaption>
+        </figure>
+
+        <div class="howie-years" id="howieYears" role="group" aria-label="Howie years"></div>
+        <p class="howie-key">Mint years were Howie at the peak. Ice-blue was still a win. Gold was mixed. Red was a winter.</p>
+        <div class="howie-board" id="howieBoard"></div>
+        <p class="photo-credit">Howie portrait from 2025 training camp, Wikimedia Commons. Monument image made for this shrine. 2015 is Chip Kelly’s personnel year — still ranked so the mountain is honest.</p>
+      </section>
+
+      <section class="chant" id="chant">
+        <div class="chant-inner">
+          <p class="eyebrow">The noise</p>
+          <h2>Hit the call.</h2>
+          <p class="chant-lead">
+            Mash a pad. YouTube brings the Linc, the parade, and the shove into the Nest.
+            If a clip is blocked, Rocky takes the stairs.
+          </p>
+          <div class="pads" id="pads">
+            <button class="pad" data-call="eagles">E-A-G-L-E-S</button>
+            <button class="pad" data-call="fly">FLY EAGLES FLY</button>
+            <button class="pad" data-call="birds">GO BIRDS</button>
+            <button class="pad" data-call="shove">BROTHERLY SHOVE</button>
+          </div>
+          <div class="chant-board" id="chantBoard">
+            <div class="chant-screen" id="chantScreen">
+              <div id="chantPlayer"></div>
+              <p class="chant-idle" id="chantIdle">Jumbotron dark. Hit a pad.</p>
+            </div>
+            <p class="chant-track" id="chantTrack"></p>
+          </div>
+          <p class="chant-output" id="chantOut" aria-live="polite">Waiting on the crowd…</p>
+          <p class="photo-credit">
+            Audio plays through YouTube’s player. We do not host or download the clips.
+          </p>
+        </div>
+      </section>
+
+      <section class="blood" id="blood">
+        <div class="section-head">
+          <p class="eyebrow">The bloodline</p>
+          <h2>We do not rent glory.<br />We keep it in the case.</h2>
+        </div>
+
+        <div class="lombardi-grid">
+          <article class="lombardi lii">
+            <img class="lombardi-photo" src="/photos/lombardi-lii.jpg" alt="Vince Lombardi Trophy from the Super Bowl LII parade" />
+            <p class="lombardi-tag">Super Bowl LII · Feb 4, 2018</p>
+            <h3>41–33</h3>
+            <p class="lombardi-vs">Eagles over Patriots</p>
+            <p class="lombardi-copy">
+              Minneapolis. Fourth-and-goal. Nick Foles in the slot. The Philly Special
+              is not a play — it is a civic religion. First Lombardi. Forever.
+            </p>
+            <ul>
+              <li>Philly Special</li>
+              <li>Foles MVP</li>
+              <li>Underdog scripture</li>
+            </ul>
+          </article>
+
+          <article class="lombardi lix">
+            <img class="lombardi-photo" src="/photos/lombardi-lix.jpg" alt="Vince Lombardi Trophy" />
+            <p class="lombardi-tag">Super Bowl LIX · Feb 9, 2025</p>
+            <h3>40–22</h3>
+            <p class="lombardi-vs">Eagles over Chiefs</p>
+            <p class="lombardi-copy">
+              New Orleans. Hurts in command. The Birds took the dynasty’s crown and
+              flew it back to Broad Street. Second star. Same city. Louder.
+            </p>
+            <ul>
+              <li>Hurts MVP</li>
+              <li>Defense hunted</li>
+              <li>The Linc roared home</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="era-row">
+          <div class="era">
+            <img src="/logos/eagles.svg" alt="" />
+            <span>1948</span>
+            <p>NFL title. Steagles blood still in the dirt.</p>
+          </div>
+          <div class="era">
+            <img src="/logos/eagles.svg" alt="" />
+            <span>1949</span>
+            <p>Back-to-back. Van Buren ran the league down.</p>
+          </div>
+          <div class="era">
+            <img src="/logos/eagles.svg" alt="" />
+            <span>1960</span>
+            <p>Bednarik. The last team to beat Lombardi’s Packers in a title game.</p>
+          </div>
+          <div class="era">
+            <img src="/logos/eagles.svg" alt="" />
+            <span>2026</span>
+            <p>Two-time defending NFC East. The hunt is open again.</p>
+          </div>
+        </div>
+        <p class="photo-credit">Trophy photos from the Super Bowl LII parade, Wikimedia Commons.</p>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div>
+        <p class="nav-brand">
+          <img src="/logos/eagles.svg" alt="" />
+          THE NEST
+        </p>
+        <p>An unofficial Philadelphia Eagles fandom shrine. Not affiliated with the NFL or the club.</p>
+      </div>
+      <img class="foot-word" src="/logos/eagles-wordmark.svg" alt="Eagles" />
+      <p class="foot-end">Built in midnight green · 2026</p>
+    </footer>
+
+    <dialog class="stat-modal" id="statModal" aria-labelledby="statName">
+      <button class="stat-close" id="statClose" type="button">Close</button>
+      <div class="stat-top">
+        <img id="statPhoto" alt="" />
+        <div>
+          <p class="eyebrow" id="statRole"></p>
+          <h2 id="statName"></h2>
+          <p class="stat-college" id="statCollege"></p>
+        </div>
+      </div>
+      <div class="stat-grid">
+        <section>
+          <h3>Pro</h3>
+          <dl id="statPro"></dl>
+          <p class="stat-note" id="statProNote"></p>
+        </section>
+        <section>
+          <h3 id="statSchoolLabel">College</h3>
+          <dl id="statSchool"></dl>
+          <p class="stat-note" id="statSchoolNote"></p>
+        </section>
+      </div>
+    </dialog>
+
+    <div class="tiger-audio" aria-hidden="true">
+      <div id="tigerPlayer"></div>
+    </div>
+
+    <dialog class="stat-modal" id="rivalModal" aria-labelledby="rivalName">
+      <button class="stat-close" id="rivalClose" type="button">Close</button>
+      <div class="stat-top rival-top">
+        <img id="rivalLogo" alt="" />
+        <div>
+          <p class="eyebrow">Recent vs. the Birds</p>
+          <h2 id="rivalName"></h2>
+          <p class="stat-college" id="rivalSeries"></p>
+        </div>
+      </div>
+      <div class="rival-list" id="rivalList"></div>
+    </dialog>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
