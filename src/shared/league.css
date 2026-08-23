@@ -104,3 +104,26 @@
 [data-team="phillies"] .hero-orb {
   background: radial-gradient(circle at 30% 40%, rgba(232, 24, 40, 0.4), transparent 60%);
 }
+
+[data-team="hub"] {
+  --ink: #060908;
+  --ink-2: #0c1210;
+  --midnight: #0b2820;
+  --mint: #3ddc97;
+  --paper: #e7efe9;
+  --fog: #8a9692;
+  --line: rgba(231, 239, 233, 0.12);
+}
+
+html[data-team="hub"] body {
+  cursor: auto;
+}
+
+html[data-team="hub"] .cursor {
+  display: none;
+}
+
+html[data-team="hub"] button,
+html[data-team="hub"] a {
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+{
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/nest", "destination": "/nest/index.html" },
+    { "source": "/sixers", "destination": "/sixers/index.html" },
+    { "source": "/flyers", "destination": "/flyers/index.html" },
+    { "source": "/phillies", "destination": "/phillies/index.html" }
+  ],
+  "redirects": [
+    { "source": "/eagles", "destination": "/nest/", "permanent": true },
+    { "source": "/eagles/", "destination": "/nest/", "permanent": true }
+  ]
+}
