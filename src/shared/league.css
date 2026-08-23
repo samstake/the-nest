@@ -1,0 +1,106 @@
+.league-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(4, 8, 7, 0.92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
+.league-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.league-pill img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.league-pill:hover {
+  border-color: var(--mint);
+}
+
+.league-pill.is-here {
+  background: color-mix(in srgb, var(--mint) 18%, transparent);
+  border-color: var(--mint);
+}
+
+.nav {
+  top: 44px;
+}
+
+@media (max-width: 900px) {
+  .league-pill-name {
+    display: none;
+  }
+
+  .league-pill {
+    padding: 8px 10px;
+  }
+
+  .league-bar {
+    justify-content: space-between;
+  }
+}
+
+[data-team="sixers"] {
+  --ink: #0a0f18;
+  --ink-2: #111827;
+  --midnight: #002b5c;
+  --mint: #006bb6;
+  --kelly: #ed174c;
+  --paper: #f4f7fb;
+  --fog: #8a96a8;
+  --line: rgba(244, 247, 251, 0.12);
+}
+
+[data-team="flyers"] {
+  --ink: #0a0a0a;
+  --ink-2: #141414;
+  --midnight: #2a0500;
+  --mint: #f74902;
+  --kelly: #ffffff;
+  --paper: #f5f0ec;
+  --fog: #9a9088;
+  --line: rgba(245, 240, 236, 0.12);
+}
+
+[data-team="phillies"] {
+  --ink: #0c0818;
+  --ink-2: #14102a;
+  --midnight: #002d72;
+  --mint: #e81828;
+  --kelly: #002d72;
+  --paper: #f4f2fa;
+  --fog: #8a8898;
+  --line: rgba(244, 242, 250, 0.12);
+}
+
+[data-team="sixers"] .hero-orb {
+  background: radial-gradient(circle at 30% 40%, rgba(0, 107, 182, 0.45), transparent 60%);
+}
+
+[data-team="flyers"] .hero-orb {
+  background: radial-gradient(circle at 30% 40%, rgba(247, 73, 2, 0.45), transparent 60%);
+}
+
+[data-team="phillies"] .hero-orb {
+  background: radial-gradient(circle at 30% 40%, rgba(232, 24, 40, 0.4), transparent 60%);
+}

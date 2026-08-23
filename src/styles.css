@@ -207,7 +207,7 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 140px 40px 72px;
+  padding: 180px 40px 72px;
   position: relative;
   overflow: hidden;
 }
@@ -242,6 +242,12 @@ svg {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--mint);
+}
+
+.section-lead {
+  margin-top: 12px;
+  max-width: 52ch;
+  color: var(--fog);
 }
 
 .hero-logo {
@@ -1357,7 +1363,7 @@ svg {
   }
 
   .hero {
-    padding-top: 120px;
+    padding-top: 160px;
   }
 
   .hero-scroll {

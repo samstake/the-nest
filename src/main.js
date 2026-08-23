@@ -1,5 +1,9 @@
 import "./styles.css";
+import "./shared/league.css";
+import { initLeagueNav } from "./shared/league.js";
 import { howieYears } from "./howie.js";
+
+initLeagueNav("nest");
 
 const games = [
   { week: "WK 1", opponent: "Washington Commanders", opp: "commanders", logo: "/logos/commanders.svg", when: "Sun Sep 13 · 4:25 PM · FOX", loc: "home", tags: ["home"] },
