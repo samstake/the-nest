@@ -1,0 +1,234 @@
+{
+  "team": "sixers",
+  "season": "2026–27",
+  "updated": "2026-08-23",
+  "starMonth": "2026-08",
+  "stars": ["embiid", "maxey", "lebron", "brown", "edgecombe", "simons"],
+  "players": [
+    {
+      "id": "bona",
+      "name": "Adem Bona",
+      "num": "30",
+      "role": "C · Rim protection",
+      "photo": "/logos/sixers.svg",
+      "college": "UCLA",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "58"], ["PPG", "5.2"], ["RPG", "4.1"], ["BPG", "1.3"]],
+          "note": "Second-year big man. Defensive anchor off the bench."
+        }
+      ]
+    },
+    {
+      "id": "brown",
+      "name": "Jaylen Brown",
+      "num": "7",
+      "role": "F · Two-way wing",
+      "photo": "/logos/sixers.svg",
+      "college": "California",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "72"], ["PPG", "22.8"], ["RPG", "5.9"], ["APG", "4.2"], ["FG%", "47.1%"]],
+          "note": "Acquired in the 2026 blockbuster. Finals MVP pedigree on Broad Street."
+        }
+      ]
+    },
+    {
+      "id": "caldwell-pope",
+      "name": "Kentavious Caldwell-Pope",
+      "num": "14",
+      "role": "G · 3-and-D",
+      "photo": "/logos/sixers.svg",
+      "college": "Georgia",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "74"], ["PPG", "8.4"], ["3P%", "38.6%"], ["SPG", "1.1"]],
+          "note": "Championship vet. Closing-lineup defender."
+        }
+      ]
+    },
+    {
+      "id": "council",
+      "name": "Ricky Council IV",
+      "num": "16",
+      "role": "G · Energy scorer",
+      "photo": "/logos/sixers.svg",
+      "college": "Arkansas",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "61"], ["PPG", "9.8"], ["RPG", "3.4"], ["3P%", "35.2%"]],
+          "note": "Second-year wing. Microwave off the pine."
+        }
+      ]
+    },
+    {
+      "id": "drummond",
+      "name": "Andre Drummond",
+      "num": "3",
+      "role": "C · Boards",
+      "photo": "/logos/sixers.svg",
+      "college": "Connecticut",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "68"], ["PPG", "8.1"], ["RPG", "10.4"], ["ORB", "3.2"]],
+          "note": "Still a double-double machine in limited minutes."
+        }
+      ]
+    },
+    {
+      "id": "edgecombe",
+      "name": "VJ Edgecombe",
+      "num": "77",
+      "role": "G · Rookie star",
+      "photo": "/logos/sixers.svg",
+      "college": "Baylor",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "78"], ["PPG", "14.6"], ["RPG", "4.8"], ["APG", "3.9"], ["3P%", "37.4%"]],
+          "note": "2026 lottery pick. Already starting on a contender."
+        }
+      ]
+    },
+    {
+      "id": "edwards",
+      "name": "Justin Edwards",
+      "num": "11",
+      "role": "F · Two-way",
+      "photo": "/logos/sixers.svg",
+      "college": "Kentucky",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "52"], ["PPG", "6.4"], ["RPG", "2.8"], ["FG%", "44.0%"]],
+          "note": "Developmental wing on a two-way deal."
+        }
+      ]
+    },
+    {
+      "id": "embiid",
+      "name": "Joel Embiid",
+      "num": "21",
+      "role": "C · Captain",
+      "photo": "/logos/sixers.svg",
+      "college": "Kansas",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "54"], ["PPG", "31.2"], ["RPG", "10.8"], ["APG", "4.6"], ["BPG", "1.8"]],
+          "note": "2023 MVP. The Process personified. Load-managed for October."
+        }
+      ]
+    },
+    {
+      "id": "grimes",
+      "name": "Quentin Grimes",
+      "num": "5",
+      "role": "G · Spark plug",
+      "photo": "/logos/sixers.svg",
+      "college": "Houston",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "70"], ["PPG", "11.4"], ["3P%", "39.1%"], ["RPG", "3.2"]],
+          "note": "Three-and-D guard. Rotation staple."
+        }
+      ]
+    },
+    {
+      "id": "lebron",
+      "name": "LeBron James",
+      "num": "23",
+      "role": "F · The King",
+      "photo": "/logos/sixers.svg",
+      "college": "St. Vincent-St. Mary HS",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "71"], ["PPG", "24.6"], ["RPG", "7.2"], ["APG", "8.1"], ["FG%", "52.3%"]],
+          "note": "Year 24 in Sixers blue. Banner 17 chase."
+        }
+      ]
+    },
+    {
+      "id": "maxey",
+      "name": "Tyrese Maxey",
+      "num": "0",
+      "role": "PG · Franchise guard",
+      "photo": "/logos/sixers.svg",
+      "college": "Kentucky",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "76"], ["PPG", "26.4"], ["APG", "6.8"], ["3P%", "40.2%"], ["FT%", "89.1%"]],
+          "note": "All-Star. Maxey for three echoes through South Broad."
+        }
+      ]
+    },
+    {
+      "id": "mccain",
+      "name": "Jared McCain",
+      "num": "20",
+      "role": "G · Shooter",
+      "photo": "/logos/sixers.svg",
+      "college": "Duke",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "64"], ["PPG", "10.2"], ["3P%", "41.8%"], ["APG", "2.4"]],
+          "note": "Rookie scoring punch returned from injury."
+        }
+      ]
+    },
+    {
+      "id": "simons",
+      "name": "Anfernee Simons",
+      "num": "1",
+      "role": "G · Microwave",
+      "photo": "/logos/sixers.svg",
+      "college": "IMG Academy",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "69"], ["PPG", "17.8"], ["3P%", "38.9%"], ["APG", "4.1"]],
+          "note": "Instant offense off the bench. Sixth Man buzz."
+        }
+      ]
+    },
+    {
+      "id": "walker",
+      "name": "Jabari Walker",
+      "num": "33",
+      "role": "F · Hustle",
+      "photo": "/logos/sixers.svg",
+      "college": "Colorado",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "55"], ["PPG", "5.8"], ["RPG", "4.6"], ["ORB", "1.8"]],
+          "note": "Energy forward. Glass crasher."
+        }
+      ]
+    },
+    {
+      "id": "barlow",
+      "name": "Dominick Barlow",
+      "num": "25",
+      "role": "F · Length",
+      "photo": "/logos/sixers.svg",
+      "college": "Overtime Elite",
+      "sections": [
+        {
+          "title": "2025–26 season",
+          "rows": [["GP", "48"], ["PPG", "4.2"], ["RPG", "3.1"], ["BPG", "0.6"]],
+          "note": "Young wing with defensive upside."
+        }
+      ]
+    }
+  ]
+}

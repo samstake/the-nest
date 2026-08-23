@@ -1,20 +1,18 @@
-export const roster = [
-  { num: "3", name: "Bryce Harper", role: "RF · Captain", note: "2024 NLCS MVP. The face of Philadelphia baseball." },
-  { num: "10", name: "J.T. Realmuto", role: "C", note: "Gold Glove backstop. October backbone." },
-  { num: "7", name: "Trea Turner", role: "SS", note: "Speed and spark at the top." },
-  { num: "13", name: "Nick Castellanos", role: "RF", note: "Clutch hits. Swagger included." },
-  { num: "27", name: "Aaron Nola", role: "SP", note: "Ace. Citizens Bank Friday nights." },
-  { num: "51", name: "Ranger Suárez", role: "SP", note: "Left arm filth. Playoff proven." },
-];
-
 export const schedule = [
-  { week: "MAR 27", opponent: "Washington Nationals", when: "Thu · 3:05 PM · NBCS", loc: "away", tags: ["away"] },
-  { week: "MAR 30", opponent: "Atlanta Braves", when: "Sun · 1:35 PM · ESPN", loc: "home", tags: ["home", "prime"] },
-  { week: "APR 4", opponent: "New York Mets", when: "Fri · 7:05 PM · AppleTV+", loc: "home", tags: ["home", "prime"] },
-  { week: "APR 8", opponent: "Miami Marlins", when: "Tue · 6:40 PM · NBCS", loc: "away", tags: ["away"] },
-  { week: "APR 14", opponent: "St. Louis Cardinals", when: "Mon · 7:05 PM · NBCS", loc: "home", tags: ["home"] },
-  { week: "APR 18", opponent: "San Diego Padres", when: "Fri · 9:40 PM · NBCS", loc: "away", tags: ["away"] },
-  { week: "APR 25", opponent: "Chicago Cubs", when: "Fri · 2:20 PM · FOX", loc: "away", tags: ["away", "prime"] },
+  { week: "MAR 26", opponent: "Washington Nationals", when: "Thu · 3:05 PM · NBCS", loc: "away", tags: ["away"] },
+  { week: "MAR 30", opponent: "Atlanta Braves", when: "Mon · 7:05 PM · ESPN", loc: "home", tags: ["home", "prime"] },
+  { week: "APR 3", opponent: "New York Mets", when: "Fri · 7:05 PM · Apple TV+", loc: "home", tags: ["home", "prime"] },
+  { week: "APR 7", opponent: "Miami Marlins", when: "Tue · 6:40 PM · NBCS", loc: "away", tags: ["away"] },
+  { week: "APR 14", opponent: "St. Louis Cardinals", when: "Tue · 7:05 PM · NBCS", loc: "home", tags: ["home"] },
+  { week: "APR 18", opponent: "San Diego Padres", when: "Sat · 9:40 PM · NBCS", loc: "away", tags: ["away"] },
+  { week: "APR 25", opponent: "Chicago Cubs", when: "Sat · 2:20 PM · FOX", loc: "away", tags: ["away", "prime"] },
+  { week: "MAY 15", opponent: "Los Angeles Dodgers", when: "Fri · 7:05 PM · ESPN", loc: "home", tags: ["home", "prime"] },
+  { week: "JUN 20", opponent: "New York Mets", when: "Sat · 7:15 PM · FOX", loc: "away", tags: ["away", "prime"] },
+  { week: "JUL 4", opponent: "Atlanta Braves", when: "Sat · 4:05 PM · NBCS", loc: "home", tags: ["home"] },
+  { week: "AUG 15", opponent: "Washington Nationals", when: "Sat · 6:45 PM · NBCS", loc: "home", tags: ["home"] },
+  { week: "AUG 23", opponent: "Miami Marlins", when: "Sun · 1:35 PM · NBCS", loc: "home", tags: ["home"] },
+  { week: "SEP 12", opponent: "New York Mets", when: "Sat · 7:05 PM · Apple TV+", loc: "home", tags: ["home", "prime"] },
+  { week: "SEP 26", opponent: "Regular season finale", when: "Sat · TBD · NBCS", loc: "away", tags: ["away"] },
 ];
 
 export const legends = [

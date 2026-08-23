@@ -1,6 +1,7 @@
 import "./styles.css";
 import "./shared/league.css";
 import { initLeagueNav } from "./shared/league.js";
+import { initRoster } from "./shared/roster.js";
 import { howieYears } from "./howie.js";
 
 initLeagueNav("nest");
@@ -1122,7 +1123,9 @@ function openStats(id, anchor) {
   pinModal(statModal, anchor);
 }
 
-document.querySelectorAll(".player, .coach").forEach((card) => {
+initRoster("nest", "#rosterList", { getStats: (id) => playerStats[id] });
+
+document.querySelectorAll(".coach").forEach((card) => {
   const open = () => openStats(card.dataset.id, card);
   card.addEventListener("click", open);
   card.addEventListener("keydown", (event) => {

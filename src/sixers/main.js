@@ -2,14 +2,14 @@ import "../styles.css";
 import "../shared/league.css";
 import "./sixers.css";
 import { initLeagueNav, initSharedChrome } from "../shared/league.js";
-import { roster, schedule, legends, lebronGames, chants } from "./data.js";
+import { initRoster } from "../shared/roster.js";
+import { schedule, legends, lebronGames, chants } from "./data.js";
 
 initLeagueNav("sixers");
 initSharedChrome();
 
 const gamesEl = document.querySelector("#games");
 const filters = document.querySelectorAll(".filter");
-const squadEl = document.querySelector("#squadGrid");
 const legendsEl = document.querySelector("#legendsWall");
 const lebronGrid = document.querySelector("#lebronGrid");
 const lebronScreen = document.querySelector("#lebronScreen");
@@ -41,22 +41,6 @@ function loadYouTubeAPI() {
     document.head.appendChild(tag);
   });
   return ytLoader;
-}
-
-function renderSquad() {
-  if (!squadEl) return;
-  squadEl.innerHTML = roster
-    .map(
-      (p) => `
-    <article class="squad-card">
-      <p class="num">${p.num}</p>
-      <h3>${p.name}</h3>
-      <p class="role">${p.role}</p>
-      <p>${p.note}</p>
-    </article>
-  `
-    )
-    .join("");
 }
 
 function renderLegends() {
@@ -204,7 +188,7 @@ function playChant(key) {
     .then((player) => cue(player));
 }
 
-renderSquad();
+initRoster("sixers", "#rosterList");
 renderLegends();
 renderGames();
 renderLebronShrine();

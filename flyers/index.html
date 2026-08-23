@@ -24,6 +24,7 @@
       <a class="nav-brand" href="#top"><img src="/logos/flyers.svg" alt="" />THE BROAD</a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#squad">Squad</a>
+        <a href="#run">The Run</a>
         <a href="#bullies">Bullies</a>
         <a href="#schedule">Schedule</a>
         <a href="#blood">Blood</a>
@@ -36,14 +37,13 @@
         <div class="hero-bg" aria-hidden="true"><div class="hero-orb"></div></div>
         <p class="hero-kicker reveal">2× Stanley Cup champions · Est. 1967</p>
         <img class="hero-logo reveal delay-1" src="/logos/flyers.svg" alt="Philadelphia Flyers" />
-        <h1 class="hero-title">
-          <span class="reveal delay-1">LET'S</span>
-          <span class="reveal delay-2">GO</span>
-          <span class="reveal delay-3">FLYERS</span>
+        <h1 class="hero-title hero-title--split reveal delay-1">
+          <span class="hero-line-accent">2026 PLAYOFFS</span>
+          <span class="hero-line-main">THE RUN</span>
         </h1>
-        <p class="hero-sub reveal delay-4">Orange crush. Broad Street Bullies energy. The Spectrum lives forever.</p>
+        <p class="hero-sub reveal delay-4">Orange storm. Vladar's wall. Martone's history. Broad Street felt alive again.</p>
         <div class="hero-cta reveal delay-5">
-          <a class="btn btn-fill" href="#bullies">The Bullies</a>
+          <a class="btn btn-fill" href="#run">The epic run</a>
           <a class="btn btn-ghost" href="#blood">The Cups</a>
         </div>
       </section>
@@ -57,8 +57,16 @@
       </section>
       <section class="birds" id="squad">
         <p class="eyebrow">The squad</p>
-        <h2>Orange and black.</h2>
-        <div class="squad-grid" id="squadGrid"></div>
+        <h2>2026–27 roster.</h2>
+        <p class="section-lead">Alphabetical list. Gold names = 2026 playoff stars.</p>
+        <div id="rosterList"></div>
+      </section>
+      <section class="playoff-run birds" id="run">
+        <p class="eyebrow">April 2026</p>
+        <h2>The epic end-of-season run.</h2>
+        <p class="section-lead" id="runSubhead"></p>
+        <div class="run-grid" id="runGrid"></div>
+        <div class="run-hero-moment" id="runMoments"></div>
       </section>
       <section class="birds" id="bullies">
         <p class="eyebrow">Broad Street</p>
@@ -74,7 +82,7 @@
       </section>
       <section class="schedule" id="schedule">
         <p class="eyebrow">The slate</p>
-        <h2>2025–26 schedule.</h2>
+        <h2>2026–27 schedule.</h2>
         <div class="filter-bar">
           <button class="filter is-on" data-filter="all" type="button">All</button>
           <button class="filter" data-filter="home" type="button">Home</button>

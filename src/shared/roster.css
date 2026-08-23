@@ -1,0 +1,225 @@
+.roster-list-wrap {
+  margin-top: 32px;
+}
+
+.roster-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: baseline;
+  margin-top: 12px;
+  color: var(--fog);
+  font-size: 13px;
+}
+
+.roster-meta strong {
+  color: var(--paper);
+}
+
+.roster-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.roster-row {
+  display: grid;
+  grid-template-columns: 52px 44px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.roster-row:last-child {
+  border-bottom: none;
+}
+
+.roster-row:hover,
+.roster-row:focus-visible {
+  background: color-mix(in srgb, var(--mint) 8%, transparent);
+  outline: none;
+}
+
+.roster-row.is-star .roster-name {
+  color: #d4af37;
+  text-shadow: 0 0 24px rgba(212, 175, 55, 0.35);
+}
+
+.roster-num {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--fog);
+  letter-spacing: 0.04em;
+}
+
+.roster-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--ink-2);
+}
+
+.roster-thumb.is-mark {
+  object-fit: contain;
+  padding: 4px;
+}
+
+.roster-name {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(18px, 2.4vw, 24px);
+  letter-spacing: 0.02em;
+}
+
+.roster-role {
+  color: var(--silver);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.roster-hint {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fog);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.roster-row:hover .roster-hint {
+  opacity: 1;
+}
+
+.roster-stars-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--fog);
+}
+
+.roster-stars-note em {
+  color: #d4af37;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hero-title--single {
+  font-size: clamp(64px, 16vw, 220px);
+  line-height: 0.85;
+}
+
+.hero-title--single span {
+  display: inline;
+}
+
+.hero-title--split {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  line-height: 0.82;
+}
+
+.hero-title--split .hero-line-accent {
+  color: var(--mint);
+  font-size: 0.42em;
+  letter-spacing: 0.28em;
+  margin-bottom: 0.08em;
+}
+
+.hero-title--split .hero-line-main {
+  display: block;
+}
+
+.hero-title--banner {
+  font-size: clamp(72px, 18vw, 240px);
+  letter-spacing: -0.02em;
+}
+
+.hero-title--banner span {
+  display: block;
+  background: linear-gradient(90deg, var(--paper), var(--mint));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.playoff-run {
+  background: var(--ink-2);
+  border-top: 1px solid var(--line);
+}
+
+.run-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.run-card {
+  border: 1px solid var(--line);
+  padding: 24px;
+  background: linear-gradient(145deg, rgba(247, 73, 2, 0.12), transparent);
+}
+
+.run-card h3 {
+  font-family: var(--display);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+}
+
+.run-card .run-result {
+  color: var(--mint);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.run-card p {
+  margin-top: 10px;
+  color: var(--silver);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.run-hero-moment {
+  margin-top: 36px;
+  border: 1px solid var(--mint);
+  padding: 28px;
+  background: color-mix(in srgb, var(--mint) 6%, transparent);
+}
+
+.run-hero-moment h3 {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+}
+
+.run-hero-moment p {
+  margin-top: 12px;
+  color: var(--silver);
+  max-width: 62ch;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .roster-row {
+    grid-template-columns: 44px 36px 1fr;
+  }
+
+  .roster-hint {
+    display: none;
+  }
+
+  .run-grid {
+    grid-template-columns: 1fr;
+  }
+}

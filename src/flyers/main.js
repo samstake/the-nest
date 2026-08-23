@@ -2,15 +2,18 @@ import "../styles.css";
 import "../shared/league.css";
 import "../shared/team.css";
 import { initLeagueNav, initSharedChrome } from "../shared/league.js";
-import { roster, schedule, bullies, cups, chants } from "./data.js";
+import { initRoster } from "../shared/roster.js";
+import { schedule, playoffRun, bullies, chants } from "./data.js";
 
 initLeagueNav("flyers");
 initSharedChrome();
 
-const squadEl = document.querySelector("#squadGrid");
 const gamesEl = document.querySelector("#games");
 const filters = document.querySelectorAll(".filter");
 const bulliesEl = document.querySelector("#bulliesGrid");
+const runSubhead = document.querySelector("#runSubhead");
+const runGrid = document.querySelector("#runGrid");
+const runMoments = document.querySelector("#runMoments");
 const pads = document.querySelectorAll(".pad");
 const chantOut = document.querySelector("#chantOut");
 const chantScreen = document.querySelector("#chantScreen");
@@ -39,32 +42,40 @@ function loadYouTubeAPI() {
   return ytLoader;
 }
 
-function card(html) {
-  return html;
-}
-
-squadEl.innerHTML = roster
-  .map(
-    (p) => card(`
-  <article class="squad-card">
-    <p class="num">${p.num}</p>
-    <h3>${p.name}</h3>
-    <p class="role">${p.role}</p>
-    <p>${p.note}</p>
-  </article>`)
-  )
-  .join("");
-
 bulliesEl.innerHTML = bullies
   .map(
-    (b) => card(`
+    (b) => `
   <article class="bully-card">
     <h3>${b.name}</h3>
     <p class="stat">${b.stat}</p>
     <p>${b.note}</p>
-  </article>`)
+  </article>`
   )
   .join("");
+
+function renderPlayoffRun() {
+  if (runSubhead) runSubhead.textContent = playoffRun.subhead;
+  if (runGrid) {
+    runGrid.innerHTML = playoffRun.rounds
+      .map(
+        (r) => `
+      <article class="run-card">
+        <h3>${r.title}</h3>
+        <p class="run-result">${r.result}</p>
+        <p>${r.note}</p>
+      </article>`
+      )
+      .join("");
+  }
+  if (runMoments) {
+    runMoments.innerHTML = `
+      <h3>${playoffRun.headline}</h3>
+      ${playoffRun.moments
+        .map((m) => `<p><strong>${m.title}.</strong> ${m.detail}</p>`)
+        .join("")}
+    `;
+  }
+}
 
 function renderGames(filter = "all") {
   gamesEl.innerHTML = schedule
@@ -84,6 +95,8 @@ function renderGames(filter = "all") {
     .join("");
 }
 
+initRoster("flyers", "#rosterList");
+renderPlayoffRun();
 renderGames();
 
 filters.forEach((btn) => {
