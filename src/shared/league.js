@@ -1,5 +1,5 @@
 import "./allPhilly.css";
-import { initAllPhillyEgg } from "./allPhilly.js";
+import { initAllPhillyEgg, openAllPhillyModal } from "./allPhilly.js";
 
 let eggReady = false;
 
@@ -42,7 +42,7 @@ export function initLeagueNav(currentId) {
   const mount = document.querySelector("#leagueNav");
   if (!mount) return;
 
-  mount.innerHTML = PHILLY_SITES.map(
+  const pills = PHILLY_SITES.map(
     (site) => `
     <a
       href="${site.path}"
@@ -55,6 +55,24 @@ export function initLeagueNav(currentId) {
     </a>
   `
   ).join("");
+
+  mount.innerHTML = `
+    <button
+      class="league-all-philly${currentId === "hub" ? " is-here" : ""}"
+      type="button"
+      id="leagueAllPhilly"
+      aria-label="Open ALL PHILLY rankings"
+      title="ALL PHILLY — All-Time Top 10 & Hot List"
+    >
+      ALL PHILLY
+    </button>
+    <div class="league-pills">${pills}</div>
+  `;
+
+  mount.querySelector("#leagueAllPhilly")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    openAllPhillyModal();
+  });
 
   if (!eggReady) {
     initAllPhillyEgg();
