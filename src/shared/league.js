@@ -1,3 +1,8 @@
+import "./allPhilly.css";
+import { initAllPhillyEgg } from "./allPhilly.js";
+
+let eggReady = false;
+
 export const PHILLY_SITES = [
   {
     id: "nest",
@@ -50,6 +55,11 @@ export function initLeagueNav(currentId) {
     </a>
   `
   ).join("");
+
+  if (!eggReady) {
+    initAllPhillyEgg();
+    eggReady = true;
+  }
 }
 
 export function initSharedChrome() {
