@@ -73,6 +73,7 @@ export const ALL_PHILLY_TOP_10 = [
 
 let buffer = "";
 let modal;
+let hotCache = null;
 
 function typingTarget(node) {
   if (!node || node === document.body || node === document.documentElement) return false;
@@ -82,27 +83,33 @@ function typingTarget(node) {
   return false;
 }
 
-function ensureModal() {
-  if (modal) return modal;
-  modal = document.createElement("dialog");
-  modal.className = "all-philly-modal";
-  modal.id = "allPhillyModal";
-  modal.innerHTML = `
-    <button class="stat-close" type="button" data-close>Close</button>
-    <p class="eyebrow">Easter egg unlocked</p>
-    <h2>ALL PHILLY Top 10</h2>
-    <p class="all-philly-lead">The greatest pros across Eagles, Sixers, Flyers, and Phillies — one city, ten legends.</p>
-    <ol class="all-philly-list" id="allPhillyList"></ol>
-  `;
-  document.body.appendChild(modal);
-  modal.querySelector("[data-close]").addEventListener("click", () => modal.close());
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) modal.close();
-  });
-  return modal;
+function currentMonthKey() {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
 }
 
-function renderList() {
+async function loadHotList() {
+  if (hotCache?.month === currentMonthKey()) return hotCache;
+
+  const month = currentMonthKey();
+
+  try {
+    let res = await fetch(`/data/hot-philly/${month}.json`);
+    if (!res.ok) {
+      const indexRes = await fetch("/data/hot-philly/index.json");
+      if (!indexRes.ok) throw new Error("no index");
+      const index = await indexRes.json();
+      res = await fetch(`/data/hot-philly/${index.latest}.json`);
+      if (!res.ok) throw new Error("no latest");
+    }
+    hotCache = await res.json();
+    return hotCache;
+  } catch {
+    return null;
+  }
+}
+
+function renderAllTimeList() {
   const list = modal.querySelector("#allPhillyList");
   list.innerHTML = ALL_PHILLY_TOP_10.map(
     (entry) => `
@@ -119,9 +126,83 @@ function renderList() {
   ).join("");
 }
 
+function renderHotList(data) {
+  const list = modal.querySelector("#hotPhillyList");
+  const meta = modal.querySelector("#hotPhillyMeta");
+
+  if (!data?.players?.length) {
+    meta.textContent = "Hot list unavailable — check back soon.";
+    list.innerHTML = "";
+    return;
+  }
+
+  meta.textContent = `${data.label} · PVI rankings · Refreshed monthly`;
+
+  list.innerHTML = data.players
+    .map(
+      (entry) => `
+    <li class="all-philly-row hot-row${entry.inSeason ? " is-live" : ""}">
+      <span class="all-philly-rank">${entry.rank}</span>
+      <img src="${entry.logo}" alt="" width="28" height="28" />
+      <div>
+        <strong>${entry.name}</strong>
+        <span class="all-philly-team">${entry.team}</span>
+        <span class="hot-pvi">PVI ${entry.pvi}</span>
+        ${entry.inSeason ? '<span class="hot-badge">In season</span>' : ""}
+        <p>${entry.note}</p>
+      </div>
+    </li>
+  `
+    )
+    .join("");
+}
+
+function setHotLoading() {
+  modal.querySelector("#hotPhillyMeta").textContent = "Loading this month's hot list…";
+  modal.querySelector("#hotPhillyList").innerHTML = "";
+}
+
+function ensureModal() {
+  if (modal) return modal;
+  modal = document.createElement("dialog");
+  modal.className = "all-philly-modal";
+  modal.id = "allPhillyModal";
+  modal.innerHTML = `
+    <button class="stat-close" type="button" data-close>Close</button>
+    <p class="eyebrow">Easter egg unlocked</p>
+    <h2>ALL PHILLY</h2>
+    <p class="all-philly-lead">All-time legends vs. this month's hottest pros — four teams, one city.</p>
+    <div class="all-philly-columns">
+      <section class="all-philly-col">
+        <h3 class="all-philly-col-title">All-Time Top 10</h3>
+        <p class="all-philly-col-sub">Franchise legends across every era.</p>
+        <ol class="all-philly-list" id="allPhillyList"></ol>
+      </section>
+      <section class="all-philly-col">
+        <h3 class="all-philly-col-title">Hot List <span class="hot-flame" aria-hidden="true">🔥</span></h3>
+        <p class="all-philly-col-sub" id="hotPhillyMeta">Loading…</p>
+        <ol class="all-philly-list" id="hotPhillyList"></ol>
+      </section>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  modal.querySelector("[data-close]").addEventListener("click", () => modal.close());
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) modal.close();
+  });
+  return modal;
+}
+
+async function renderLists() {
+  renderAllTimeList();
+  setHotLoading();
+  const hot = await loadHotList();
+  renderHotList(hot);
+}
+
 export function openAllPhillyModal() {
   ensureModal();
-  renderList();
+  renderLists();
   if (!modal.open) modal.showModal();
 }
 

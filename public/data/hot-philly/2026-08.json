@@ -1,0 +1,98 @@
+{
+  "month": "2026-08",
+  "updated": "2026-08-01",
+  "label": "August 2026",
+  "methodology": "Philly Value Index (PVI): cross-sport blend of 2025–26 contract value, recent production, and roster impact. In-season players weighted +5.",
+  "players": [
+    {
+      "rank": 1,
+      "name": "Bryce Harper",
+      "team": "Phillies",
+      "logo": "/logos/phillies.svg",
+      "pvi": 98,
+      "inSeason": true,
+      "note": "NLCS MVP pace. $330M anchor. Hottest bat in a playoff race."
+    },
+    {
+      "rank": 2,
+      "name": "Jalen Hurts",
+      "team": "Eagles",
+      "logo": "/logos/eagles.svg",
+      "pvi": 96,
+      "inSeason": true,
+      "note": "Super Bowl LIX MVP. $255M extension. The city runs through QB1."
+    },
+    {
+      "rank": 3,
+      "name": "Joel Embiid",
+      "team": "Sixers",
+      "logo": "/logos/sixers.svg",
+      "pvi": 94,
+      "inSeason": false,
+      "note": "2023 MVP. Off-season recovery but franchise value unmatched."
+    },
+    {
+      "rank": 4,
+      "name": "Saquon Barkley",
+      "team": "Eagles",
+      "logo": "/logos/eagles.svg",
+      "pvi": 92,
+      "inSeason": true,
+      "note": "2,005-yard season echo. Preseason RB1 workload."
+    },
+    {
+      "rank": 5,
+      "name": "Trea Turner",
+      "team": "Phillies",
+      "logo": "/logos/phillies.svg",
+      "pvi": 89,
+      "inSeason": true,
+      "note": "Elite shortstop speed. Table-setter for Harper in August heat."
+    },
+    {
+      "rank": 6,
+      "name": "Tyrese Maxey",
+      "team": "Sixers",
+      "logo": "/logos/sixers.svg",
+      "pvi": 87,
+      "inSeason": false,
+      "note": "All-Star guard ascending. Maxey extension locked in."
+    },
+    {
+      "rank": 7,
+      "name": "A.J. Brown",
+      "team": "Eagles",
+      "logo": "/logos/eagles.svg",
+      "pvi": 86,
+      "inSeason": true,
+      "note": "$96M WR1. Red-zone gravity every Sunday."
+    },
+    {
+      "rank": 8,
+      "name": "Aaron Nola",
+      "team": "Phillies",
+      "logo": "/logos/phillies.svg",
+      "pvi": 84,
+      "inSeason": true,
+      "note": "Ace on a contender. Playoff rotation anchor."
+    },
+    {
+      "rank": 9,
+      "name": "Paul George",
+      "team": "Sixers",
+      "logo": "/logos/sixers.svg",
+      "pvi": 82,
+      "inSeason": false,
+      "note": "Homecoming max deal. Two-way wing when healthy."
+    },
+    {
+      "rank": 10,
+      "name": "Travis Konecny",
+      "team": "Flyers",
+      "logo": "/logos/flyers.svg",
+      "pvi": 78,
+      "inSeason": false,
+      "note": "Franchise winger. 30-goal pace. Flyers' top trade asset."
+    }
+  ]
+}

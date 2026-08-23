@@ -1,6 +1,6 @@
 .all-philly-modal {
-  width: min(640px, calc(100vw - 32px));
-  max-height: min(88vh, 900px);
+  width: min(1120px, calc(100vw - 32px));
+  max-height: min(90vh, 960px);
   overflow-y: auto;
   padding: 32px;
   border: 1px solid var(--line);
@@ -22,30 +22,56 @@
 .all-philly-lead {
   margin-top: 10px;
   color: var(--fog);
-  max-width: 48ch;
+  max-width: 62ch;
+}
+
+.all-philly-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+  align-items: start;
+}
+
+.all-philly-col-title {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.all-philly-col-sub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--fog);
+  min-height: 2.4em;
+}
+
+.hot-flame {
+  font-size: 0.85em;
 }
 
 .all-philly-list {
   list-style: none;
-  margin-top: 28px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .all-philly-row {
   display: grid;
   grid-template-columns: 36px 32px 1fr;
-  gap: 14px;
+  gap: 12px;
   align-items: start;
-  padding: 16px;
+  padding: 14px;
   border: 1px solid var(--line);
   background: rgba(0, 0, 0, 0.15);
 }
 
 .all-philly-rank {
   font-family: var(--display);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 900;
   color: var(--mint);
   line-height: 1;
@@ -54,25 +80,67 @@
 .all-philly-row strong {
   display: block;
   font-family: var(--display);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 800;
 }
 
 .all-philly-team {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--mint);
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 .all-philly-row p {
   margin-top: 6px;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--silver);
+  line-height: 1.45;
 }
 
-.all-philly-row:first-child {
+.all-philly-col:first-child .all-philly-row:first-child {
   border-color: var(--mint);
   background: color-mix(in srgb, var(--mint) 8%, transparent);
+}
+
+.hot-row.is-live {
+  border-color: color-mix(in srgb, var(--mint) 50%, var(--line));
+}
+
+.hot-row:first-child {
+  border-color: #e8a020;
+  background: color-mix(in srgb, #e8a020 10%, transparent);
+}
+
+.hot-pvi {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #e8a020;
+}
+
+.hot-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--mint);
+  color: var(--mint);
+  border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+  .all-philly-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .all-philly-modal {
+    padding: 24px 18px;
+  }
 }
