@@ -1,4 +1,9 @@
 {
-  "teams": ["nest", "sixers", "flyers", "phillies"],
-  "updated": "2026-08-23"
+  "teams": [
+    "nest",
+    "sixers",
+    "flyers",
+    "phillies"
+  ],
+  "updated": "2026-08-24"
 }

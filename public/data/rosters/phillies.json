@@ -1,9 +1,16 @@
 {
   "team": "phillies",
   "season": "2026",
-  "updated": "2026-08-23",
+  "updated": "2026-08-24",
   "starMonth": "2026-08",
-  "stars": ["harper", "wheeler", "schwarber", "turner", "realmuto", "nola"],
+  "stars": [
+    "harper",
+    "wheeler",
+    "schwarber",
+    "turner",
+    "realmuto",
+    "nola"
+  ],
   "players": [
     {
       "id": "bohm",
@@ -11,7 +18,34 @@
       "num": "28",
       "role": "3B · Contact bat",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "118"], ["AVG", ".276"], ["HR", "14"], ["RBI", "68"], ["OPS", ".782"]], "note": "Steady third baseman. Clutch RBI machine." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "118"
+            ],
+            [
+              "AVG",
+              ".276"
+            ],
+            [
+              "HR",
+              "14"
+            ],
+            [
+              "RBI",
+              "68"
+            ],
+            [
+              "OPS",
+              ".782"
+            ]
+          ],
+          "note": "Steady third baseman. Clutch RBI machine."
+        }
+      ]
     },
     {
       "id": "castellanos",
@@ -19,7 +53,34 @@
       "num": "8",
       "role": "RF · Swagger",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "112"], ["AVG", ".268"], ["HR", "18"], ["RBI", "72"], ["OPS", ".798"]], "note": "Right-field bat. Clutch hits included." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "112"
+            ],
+            [
+              "AVG",
+              ".268"
+            ],
+            [
+              "HR",
+              "18"
+            ],
+            [
+              "RBI",
+              "72"
+            ],
+            [
+              "OPS",
+              ".798"
+            ]
+          ],
+          "note": "Right-field bat. Clutch hits included."
+        }
+      ]
     },
     {
       "id": "duran",
@@ -27,7 +88,34 @@
       "num": "59",
       "role": "CL · Triple-digit heat",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "48"], ["SV", "32"], ["IP", "46.1"], ["ERA", "2.14"], ["K", "58"]], "note": "Acquired closer. Saves and strikeouts." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "48"
+            ],
+            [
+              "SV",
+              "32"
+            ],
+            [
+              "IP",
+              "46.1"
+            ],
+            [
+              "ERA",
+              "2.14"
+            ],
+            [
+              "K",
+              "58"
+            ]
+          ],
+          "note": "Acquired closer. Saves and strikeouts."
+        }
+      ]
     },
     {
       "id": "harper",
@@ -35,7 +123,34 @@
       "num": "3",
       "role": "1B · Captain",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "108"], ["AVG", ".298"], ["HR", "32"], ["RBI", "88"], ["OPS", ".982"]], "note": "Two-time MVP. The face of Philadelphia baseball." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "108"
+            ],
+            [
+              "AVG",
+              ".298"
+            ],
+            [
+              "HR",
+              "32"
+            ],
+            [
+              "RBI",
+              "88"
+            ],
+            [
+              "OPS",
+              ".982"
+            ]
+          ],
+          "note": "Two-time MVP. The face of Philadelphia baseball."
+        }
+      ]
     },
     {
       "id": "luzardo",
@@ -43,7 +158,34 @@
       "num": "44",
       "role": "SP · Left filth",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "24"], ["W-L", "12-6"], ["ERA", "3.42"], ["IP", "138.2"], ["K", "142"]], "note": "Mid-rotation lefty. Strikeout upside." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "24"
+            ],
+            [
+              "W-L",
+              "12-6"
+            ],
+            [
+              "ERA",
+              "3.42"
+            ],
+            [
+              "IP",
+              "138.2"
+            ],
+            [
+              "K",
+              "142"
+            ]
+          ],
+          "note": "Mid-rotation lefty. Strikeout upside."
+        }
+      ]
     },
     {
       "id": "marsh",
@@ -51,7 +193,34 @@
       "num": "16",
       "role": "CF · Defense",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "105"], ["AVG", ".251"], ["HR", "12"], ["RBI", "48"], ["SB", "14"]], "note": "Center-field glove. Table-setter speed." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "105"
+            ],
+            [
+              "AVG",
+              ".251"
+            ],
+            [
+              "HR",
+              "12"
+            ],
+            [
+              "RBI",
+              "48"
+            ],
+            [
+              "SB",
+              "14"
+            ]
+          ],
+          "note": "Center-field glove. Table-setter speed."
+        }
+      ]
     },
     {
       "id": "nola",
@@ -59,7 +228,34 @@
       "num": "27",
       "role": "SP · Ace",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "26"], ["W-L", "14-7"], ["ERA", "3.18"], ["IP", "162.0"], ["K", "178"]], "note": "Friday night ace. Citizens Bank staple." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "26"
+            ],
+            [
+              "W-L",
+              "14-7"
+            ],
+            [
+              "ERA",
+              "3.18"
+            ],
+            [
+              "IP",
+              "162.0"
+            ],
+            [
+              "K",
+              "178"
+            ]
+          ],
+          "note": "Friday night ace. Citizens Bank staple."
+        }
+      ]
     },
     {
       "id": "realmuto",
@@ -67,7 +263,34 @@
       "num": "10",
       "role": "C · Gold Glove",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "102"], ["AVG", ".272"], ["HR", "18"], ["RBI", "62"], ["CS%", "28%"]], "note": "Gold Glove backstop. October backbone." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "102"
+            ],
+            [
+              "AVG",
+              ".272"
+            ],
+            [
+              "HR",
+              "18"
+            ],
+            [
+              "RBI",
+              "62"
+            ],
+            [
+              "CS%",
+              "28%"
+            ]
+          ],
+          "note": "Gold Glove backstop. October backbone."
+        }
+      ]
     },
     {
       "id": "sanchez",
@@ -75,7 +298,34 @@
       "num": "61",
       "role": "SP · Ground-ball king",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "25"], ["W-L", "13-5"], ["ERA", "2.89"], ["IP", "155.1"], ["GB%", "54%"]], "note": "All-Star lefty. Grounders and weak contact." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "25"
+            ],
+            [
+              "W-L",
+              "13-5"
+            ],
+            [
+              "ERA",
+              "2.89"
+            ],
+            [
+              "IP",
+              "155.1"
+            ],
+            [
+              "GB%",
+              "54%"
+            ]
+          ],
+          "note": "All-Star lefty. Grounders and weak contact."
+        }
+      ]
     },
     {
       "id": "schwarber",
@@ -83,7 +333,34 @@
       "num": "12",
       "role": "DH · Leadoff pop",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "122"], ["AVG", ".241"], ["HR", "38"], ["RBI", "82"], ["OPS", ".892"]], "note": "Leadoff dinger machine. October threat." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "122"
+            ],
+            [
+              "AVG",
+              ".241"
+            ],
+            [
+              "HR",
+              "38"
+            ],
+            [
+              "RBI",
+              "82"
+            ],
+            [
+              "OPS",
+              ".892"
+            ]
+          ],
+          "note": "Leadoff dinger machine. October threat."
+        }
+      ]
     },
     {
       "id": "stott",
@@ -91,7 +368,34 @@
       "num": "5",
       "role": "2B · Defense first",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "116"], ["AVG", ".258"], ["HR", "11"], ["RBI", "54"], ["SB", "22"]], "note": "Gold Glove second base. Speed on the paths." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "116"
+            ],
+            [
+              "AVG",
+              ".258"
+            ],
+            [
+              "HR",
+              "11"
+            ],
+            [
+              "RBI",
+              "54"
+            ],
+            [
+              "SB",
+              "22"
+            ]
+          ],
+          "note": "Gold Glove second base. Speed on the paths."
+        }
+      ]
     },
     {
       "id": "turner",
@@ -99,7 +403,34 @@
       "num": "7",
       "role": "SS · Speed",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "120"], ["AVG", ".289"], ["HR", "16"], ["RBI", "58"], ["SB", "38"]], "note": "Shortstop spark. Stolen-base threat." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "120"
+            ],
+            [
+              "AVG",
+              ".289"
+            ],
+            [
+              "HR",
+              "16"
+            ],
+            [
+              "RBI",
+              "58"
+            ],
+            [
+              "SB",
+              "38"
+            ]
+          ],
+          "note": "Shortstop spark. Stolen-base threat."
+        }
+      ]
     },
     {
       "id": "wheeler",
@@ -107,7 +438,34 @@
       "num": "45",
       "role": "SP · Cy Young chase",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "27"], ["W-L", "16-5"], ["ERA", "2.54"], ["IP", "171.2"], ["K", "204"]], "note": "Staff ace. Cy Young front-runner." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "27"
+            ],
+            [
+              "W-L",
+              "16-5"
+            ],
+            [
+              "ERA",
+              "2.54"
+            ],
+            [
+              "IP",
+              "171.2"
+            ],
+            [
+              "K",
+              "204"
+            ]
+          ],
+          "note": "Staff ace. Cy Young front-runner."
+        }
+      ]
     },
     {
       "id": "wilson",
@@ -115,7 +473,34 @@
       "num": "21",
       "role": "RF · Rookie bat",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "89"], ["AVG", ".264"], ["HR", "15"], ["RBI", "52"], ["OPS", ".798"]], "note": "Rookie outfielder. Everyday at-bats." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "89"
+            ],
+            [
+              "AVG",
+              ".264"
+            ],
+            [
+              "HR",
+              "15"
+            ],
+            [
+              "RBI",
+              "52"
+            ],
+            [
+              "OPS",
+              ".798"
+            ]
+          ],
+          "note": "Rookie outfielder. Everyday at-bats."
+        }
+      ]
     },
     {
       "id": "clemens",
@@ -123,7 +508,30 @@
       "num": "23",
       "role": "UTIL · Pop",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "78"], ["AVG", ".244"], ["HR", "12"], ["RBI", "38"]], "note": "Utility bat. Corner and DH fill." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "78"
+            ],
+            [
+              "AVG",
+              ".244"
+            ],
+            [
+              "HR",
+              "12"
+            ],
+            [
+              "RBI",
+              "38"
+            ]
+          ],
+          "note": "Utility bat. Corner and DH fill."
+        }
+      ]
     },
     {
       "id": "ortiz",
@@ -131,7 +539,30 @@
       "num": "23",
       "role": "OF · Defense",
       "photo": "/logos/phillies.svg",
-      "sections": [{ "title": "2026 season (through Aug 23)", "rows": [["G", "64"], ["AVG", ".238"], ["SB", "18"], ["DEF", "Elite arm"]], "note": "Fourth outfielder. Glove and legs." }]
+      "sections": [
+        {
+          "title": "2026 season (through Aug 23)",
+          "rows": [
+            [
+              "G",
+              "64"
+            ],
+            [
+              "AVG",
+              ".238"
+            ],
+            [
+              "SB",
+              "18"
+            ],
+            [
+              "DEF",
+              "Elite arm"
+            ]
+          ],
+          "note": "Fourth outfielder. Glove and legs."
+        }
+      ]
     }
   ]
 }

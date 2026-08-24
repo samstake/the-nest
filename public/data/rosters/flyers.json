@@ -1,9 +1,16 @@
 {
   "team": "flyers",
   "season": "2026–27",
-  "updated": "2026-08-23",
+  "updated": "2026-08-24",
   "starMonth": "2026-08",
-  "stars": ["martone", "york", "vladar", "zegras", "konecny", "michkov"],
+  "stars": [
+    "martone",
+    "york",
+    "vladar",
+    "zegras",
+    "konecny",
+    "michkov"
+  ],
   "players": [
     {
       "id": "andrae",
@@ -11,7 +18,34 @@
       "num": "36",
       "role": "D · Mobile puck-mover",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "62"], ["G", "4"], ["A", "18"], ["PTS", "22"], ["+/-", "+8"]], "note": "Swedish defender. Breakout regular season before the run." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "62"
+            ],
+            [
+              "G",
+              "4"
+            ],
+            [
+              "A",
+              "18"
+            ],
+            [
+              "PTS",
+              "22"
+            ],
+            [
+              "+/-",
+              "+8"
+            ]
+          ],
+          "note": "Swedish defender. Breakout regular season before the run."
+        }
+      ]
     },
     {
       "id": "brink",
@@ -19,7 +53,30 @@
       "num": "10",
       "role": "RW · Skill winger",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "71"], ["G", "14"], ["A", "22"], ["PTS", "36"]], "note": "Top-six winger. Hobey Baker pedigree." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "71"
+            ],
+            [
+              "G",
+              "14"
+            ],
+            [
+              "A",
+              "22"
+            ],
+            [
+              "PTS",
+              "36"
+            ]
+          ],
+          "note": "Top-six winger. Hobey Baker pedigree."
+        }
+      ]
     },
     {
       "id": "deslauriers",
@@ -27,7 +84,30 @@
       "num": "44",
       "role": "LW · Enforcer",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "58"], ["G", "3"], ["A", "4"], ["PIM", "98"]], "note": "Bullies DNA. Physicality on demand." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "58"
+            ],
+            [
+              "G",
+              "3"
+            ],
+            [
+              "A",
+              "4"
+            ],
+            [
+              "PIM",
+              "98"
+            ]
+          ],
+          "note": "Bullies DNA. Physicality on demand."
+        }
+      ]
     },
     {
       "id": "foerster",
@@ -35,7 +115,34 @@
       "num": "71",
       "role": "RW · Sniper",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "74"], ["G", "24"], ["A", "19"], ["PTS", "43"], ["SOG", "198"]], "note": "Shot volume rising. Power-play threat." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "74"
+            ],
+            [
+              "G",
+              "24"
+            ],
+            [
+              "A",
+              "19"
+            ],
+            [
+              "PTS",
+              "43"
+            ],
+            [
+              "SOG",
+              "198"
+            ]
+          ],
+          "note": "Shot volume rising. Power-play threat."
+        }
+      ]
     },
     {
       "id": "frost",
@@ -43,7 +150,30 @@
       "num": "48",
       "role": "C · Two-way center",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "68"], ["G", "12"], ["A", "28"], ["PTS", "40"]], "note": "Middle-six pivot. Faceoff value." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "68"
+            ],
+            [
+              "G",
+              "12"
+            ],
+            [
+              "A",
+              "28"
+            ],
+            [
+              "PTS",
+              "40"
+            ]
+          ],
+          "note": "Middle-six pivot. Faceoff value."
+        }
+      ]
     },
     {
       "id": "konecny",
@@ -52,8 +182,54 @@
       "role": "RW · Captain",
       "photo": "/logos/flyers.svg",
       "sections": [
-        { "title": "2026 playoffs", "rows": [["GP", "10"], ["G", "4"], ["A", "7"], ["PTS", "11"], ["GWG", "1"]], "note": "Led the team in playoff scoring. Orange heart." },
-        { "title": "2025–26 regular season", "rows": [["GP", "78"], ["G", "28"], ["A", "42"], ["PTS", "70"]], "note": "Franchise forward. All-Star season." }
+        {
+          "title": "2026 playoffs",
+          "rows": [
+            [
+              "GP",
+              "10"
+            ],
+            [
+              "G",
+              "4"
+            ],
+            [
+              "A",
+              "7"
+            ],
+            [
+              "PTS",
+              "11"
+            ],
+            [
+              "GWG",
+              "1"
+            ]
+          ],
+          "note": "Led the team in playoff scoring. Orange heart."
+        },
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "78"
+            ],
+            [
+              "G",
+              "28"
+            ],
+            [
+              "A",
+              "42"
+            ],
+            [
+              "PTS",
+              "70"
+            ]
+          ],
+          "note": "Franchise forward. All-Star season."
+        }
       ]
     },
     {
@@ -62,7 +238,34 @@
       "num": "21",
       "role": "C · Energy line",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "72"], ["G", "11"], ["A", "14"], ["PTS", "25"], ["Hits", "186"]], "note": "Broad Street motor. PK staple." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "72"
+            ],
+            [
+              "G",
+              "11"
+            ],
+            [
+              "A",
+              "14"
+            ],
+            [
+              "PTS",
+              "25"
+            ],
+            [
+              "Hits",
+              "186"
+            ]
+          ],
+          "note": "Broad Street motor. PK staple."
+        }
+      ]
     },
     {
       "id": "martone",
@@ -71,8 +274,54 @@
       "role": "RW · Teen sensation",
       "photo": "/logos/flyers.svg",
       "sections": [
-        { "title": "2026 playoffs", "rows": [["GP", "10"], ["G", "5"], ["A", "4"], ["PTS", "9"], ["GWG", "2"]], "note": "First teenager with GWG in first two playoff games. History." },
-        { "title": "2025–26 regular season", "rows": [["GP", "45"], ["G", "12"], ["A", "11"], ["PTS", "23"]], "note": "19-year-old winger. Calder buzz." }
+        {
+          "title": "2026 playoffs",
+          "rows": [
+            [
+              "GP",
+              "10"
+            ],
+            [
+              "G",
+              "5"
+            ],
+            [
+              "A",
+              "4"
+            ],
+            [
+              "PTS",
+              "9"
+            ],
+            [
+              "GWG",
+              "2"
+            ]
+          ],
+          "note": "First teenager with GWG in first two playoff games. History."
+        },
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "45"
+            ],
+            [
+              "G",
+              "12"
+            ],
+            [
+              "A",
+              "11"
+            ],
+            [
+              "PTS",
+              "23"
+            ]
+          ],
+          "note": "19-year-old winger. Calder buzz."
+        }
       ]
     },
     {
@@ -82,8 +331,50 @@
       "role": "RW · Russian rocket",
       "photo": "/logos/flyers.svg",
       "sections": [
-        { "title": "2026 playoffs", "rows": [["GP", "10"], ["G", "3"], ["A", "6"], ["PTS", "9"]], "note": "Elite skill on the big stage." },
-        { "title": "2025–26 regular season", "rows": [["GP", "76"], ["G", "26"], ["A", "34"], ["PTS", "60"]], "note": "Second-year star. Top-line winger." }
+        {
+          "title": "2026 playoffs",
+          "rows": [
+            [
+              "GP",
+              "10"
+            ],
+            [
+              "G",
+              "3"
+            ],
+            [
+              "A",
+              "6"
+            ],
+            [
+              "PTS",
+              "9"
+            ]
+          ],
+          "note": "Elite skill on the big stage."
+        },
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "76"
+            ],
+            [
+              "G",
+              "26"
+            ],
+            [
+              "A",
+              "34"
+            ],
+            [
+              "PTS",
+              "60"
+            ]
+          ],
+          "note": "Second-year star. Top-line winger."
+        }
       ]
     },
     {
@@ -92,7 +383,34 @@
       "num": "55",
       "role": "D · Stay-at-home",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "64"], ["G", "2"], ["A", "12"], ["PTS", "14"], ["Blocks", "118"]], "note": "Shutdown minutes. Net-front battles." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "64"
+            ],
+            [
+              "G",
+              "2"
+            ],
+            [
+              "A",
+              "12"
+            ],
+            [
+              "PTS",
+              "14"
+            ],
+            [
+              "Blocks",
+              "118"
+            ]
+          ],
+          "note": "Shutdown minutes. Net-front battles."
+        }
+      ]
     },
     {
       "id": "tippett",
@@ -100,7 +418,30 @@
       "num": "74",
       "role": "RW · Power forward",
       "photo": "/logos/flyers.svg",
-      "sections": [{ "title": "2025–26 regular season", "rows": [["GP", "70"], ["G", "22"], ["A", "18"], ["PTS", "40"]], "note": "Size and shot. Top-six staple." }]
+      "sections": [
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "70"
+            ],
+            [
+              "G",
+              "22"
+            ],
+            [
+              "A",
+              "18"
+            ],
+            [
+              "PTS",
+              "40"
+            ]
+          ],
+          "note": "Size and shot. Top-six staple."
+        }
+      ]
     },
     {
       "id": "vladar",
@@ -109,8 +450,54 @@
       "role": "G · Playoff wall",
       "photo": "/logos/flyers.svg",
       "sections": [
-        { "title": "2026 playoffs", "rows": [["GP", "10"], ["W-L", "6-4"], ["SV%", ".928"], ["GAA", "2.14"], ["SO", "1"]], "note": "42 saves in Game 6 vs Pittsburgh. Stole the series." },
-        { "title": "2025–26 regular season", "rows": [["GP", "38"], ["W-L", "21-12-3"], ["SV%", ".912"], ["GAA", "2.68"]], "note": "1A goalie who became the playoff starter." }
+        {
+          "title": "2026 playoffs",
+          "rows": [
+            [
+              "GP",
+              "10"
+            ],
+            [
+              "W-L",
+              "6-4"
+            ],
+            [
+              "SV%",
+              ".928"
+            ],
+            [
+              "GAA",
+              "2.14"
+            ],
+            [
+              "SO",
+              "1"
+            ]
+          ],
+          "note": "42 saves in Game 6 vs Pittsburgh. Stole the series."
+        },
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "38"
+            ],
+            [
+              "W-L",
+              "21-12-3"
+            ],
+            [
+              "SV%",
+              ".912"
+            ],
+            [
+              "GAA",
+              "2.68"
+            ]
+          ],
+          "note": "1A goalie who became the playoff starter."
+        }
       ]
     },
     {
@@ -120,8 +507,58 @@
       "role": "D · Clutch gene",
       "photo": "/logos/flyers.svg",
       "sections": [
-        { "title": "2026 playoffs", "rows": [["GP", "10"], ["G", "2"], ["A", "5"], ["PTS", "7"], ["GWG", "1"]], "note": "Series-clinching OT goal in Game 6 vs Penguins." },
-        { "title": "2025–26 regular season", "rows": [["GP", "75"], ["G", "8"], ["A", "28"], ["PTS", "36"], ["TOI", "23:14"]], "note": "Top-pair defender. Norris buzz." }
+        {
+          "title": "2026 playoffs",
+          "rows": [
+            [
+              "GP",
+              "10"
+            ],
+            [
+              "G",
+              "2"
+            ],
+            [
+              "A",
+              "5"
+            ],
+            [
+              "PTS",
+              "7"
+            ],
+            [
+              "GWG",
+              "1"
+            ]
+          ],
+          "note": "Series-clinching OT goal in Game 6 vs Penguins."
+        },
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "75"
+            ],
+            [
+              "G",
+              "8"
+            ],
+            [
+              "A",
+              "28"
+            ],
+            [
+              "PTS",
+              "36"
+            ],
+            [
+              "TOI",
+              "23:14"
+            ]
+          ],
+          "note": "Top-pair defender. Norris buzz."
+        }
       ]
     },
     {
@@ -131,8 +568,50 @@
       "role": "C · Creative hub",
       "photo": "/logos/flyers.svg",
       "sections": [
-        { "title": "2026 playoffs", "rows": [["GP", "10"], ["G", "3"], ["A", "8"], ["PTS", "11"]], "note": "Playmaking engine through Round 2." },
-        { "title": "2025–26 regular season", "rows": [["GP", "73"], ["G", "19"], ["A", "41"], ["PTS", "60"]], "note": "Acquired deadline piece. 1C energy." }
+        {
+          "title": "2026 playoffs",
+          "rows": [
+            [
+              "GP",
+              "10"
+            ],
+            [
+              "G",
+              "3"
+            ],
+            [
+              "A",
+              "8"
+            ],
+            [
+              "PTS",
+              "11"
+            ]
+          ],
+          "note": "Playmaking engine through Round 2."
+        },
+        {
+          "title": "2025–26 regular season",
+          "rows": [
+            [
+              "GP",
+              "73"
+            ],
+            [
+              "G",
+              "19"
+            ],
+            [
+              "A",
+              "41"
+            ],
+            [
+              "PTS",
+              "60"
+            ]
+          ],
+          "note": "Acquired deadline piece. 1C energy."
+        }
       ]
     }
   ]
